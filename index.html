@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Panzarini | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#14b8a6',
+                        dark: '#0f172a',
+                        darker: '#020617'
+                    },
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'monospace'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darker text-gray-300 font-sans overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-dark/90 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-primary font-mono text-xl font-bold">Ryan Panzarini</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#hero" class="nav-link text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.home">Home</a>
+                        <a href="#skills" class="nav-link text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.skills">Skills</a>
+                        <a href="#projects" class="nav-link text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.projects">Projects</a>
+                        <a href="#about" class="nav-link text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.about">About</a>
+                        <a href="#contact" class="nav-link text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.contact">Contact</a>
+                        <select id="language-selector" class="bg-dark border border-gray-700 text-gray-300 px-3 py-2 rounded-md text-sm font-medium hover:border-primary transition-all duration-300 cursor-pointer">
+                            <option value="pt">Português</option>
+                            <option value="en">English</option>
+                            <option value="it">Italiano</option>
+                        </select>
+                    </div>                  
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-300 hover:text-primary focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-dark opacity-20"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark/50 to-darker/90"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 animate-fade-in">
+                <span class="text-primary" data-i18n="hero.software">SOFTWARE</span> <span data-i18n="hero.engineer">ENGINEER</span>
+            </h1>
+            <div class="text-xl md:text-2xl font-mono text-gray-400 mb-8 animate-fade-in delay-100">
+                <span class="text-primary">>></span> <span data-i18n="hero.subtitle">Software Engineer • Front-End Specialist • Data & Systems</span>
+            </div>
+            <div class="animate-fade-in delay-200">
+                <a href="#projects" class="inline-flex items-center px-6 py-3 border border-primary text-primary font-mono rounded-md hover:bg-primary/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+                    <span data-i18n="hero.button">View My Work</span> <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
+            <a href="#skills" class="text-gray-400 hover:text-primary transition-all duration-300">
+                <i data-feather="chevron-down" class="w-8 h-8"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4" data-i18n="skills.title">TECH STACK</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Skill Card 1 -->
+                <div class="skill-card bg-darker p-6 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i data-feather="code" class="text-primary"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white" data-i18n="skills.frontend">Front-End</h3>
+                    </div>
+                    <div class="h-2 bg-gray-800 rounded-full mb-2">
+                        <div class="h-2 bg-primary rounded-full" style="width: 95%"></div>
+                    </div>
+                    <p class="text-sm text-gray-400">HTML5, CSS3, JavaScript, React</p>
+                </div>
+                
+                <!-- Skill Card 2 -->
+                <div class="skill-card bg-darker p-6 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i data-feather="cpu" class="text-primary"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white" data-i18n="skills.backend">Back-End</h3>
+                    </div>
+                    <div class="h-2 bg-gray-800 rounded-full mb-2">
+                        <div class="h-2 bg-primary rounded-full" style="width: 60%"></div>
+                    </div>
+                    <p class="text-sm text-gray-400">Node.js, Java, Python, C#</p>
+                </div>
+                
+                <!-- Skill Card 3 -->
+                <div class="skill-card bg-darker p-6 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i data-feather="database" class="text-primary"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white" data-i18n="skills.data">Data Analysis</h3>
+                    </div>
+                    <div class="h-2 bg-gray-800 rounded-full mb-2">
+                        <div class="h-2 bg-primary rounded-full" style="width: 80%"></div>
+                    </div>
+                    <p class="text-sm text-gray-400">Python, SQL, Pandas, Oracle, MongoDB</p>
+                </div>
+                
+                <!-- Skill Card 4 -->
+                <div class="skill-card bg-darker p-6 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i data-feather="hard-drive" class="text-primary"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white" data-i18n="skills.systems">Systems</h3>
+                    </div>
+                    <div class="h-2 bg-gray-800 rounded-full mb-2">
+                        <div class="h-2 bg-primary rounded-full" style="width: 75%"></div>
+                    </div>
+                    <p class="text-sm text-gray-400">Linux, Docker, AWS, Windows</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4" data-i18n="projects.title">PROJECTS</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                    <div class="mb-6 h-48 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center">
+                        <img src="imagens/Acessibilidade-1-696x465.png" alt="IncluiPG" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2" data-i18n="projects.includipg.title">IncluiPG</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="projects.includipg.desc">Sistema em desenvolvimento com a proposta de aumentar a inclusão e acessibilidade na cidade de Ponta Grossa.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">React</span>
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">D3.js</span>
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Node.js</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://ryanpanzarini.github.io/IncluiPG1/" class="flex items-center text-primary hover:text-white transition-all duration-300">
+                            <i data-feather="external-link" class="w-4 h-4 mr-2"></i> <span data-i18n="common.live">Live Demo</span>
+                        </a>
+                        <a href="https://github.com/RyanPanzarini/IncluiPG1" class="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                            <i data-feather="github" class="w-4 h-4 mr-2"></i> <span data-i18n="common.source">Source Code</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                    <div class="mb-6 h-48 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center">
+                       <img src="imagens/Imagem do WhatsApp de 2025-06-12 à(s) 14.30.55_0bdcaffc.jpg" alt="FireHouse" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2" data-i18n="projects.firehouse.title">Fire House Club</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="projects.firehouse.desc">Single-page front-end application desenvolvida com HTML5 semântico, CSS3 responsivo e JavaScript Vanilla. Implementa componentes interativos client-side (contador regressivo em tempo real e rolador de dados), integração com plataformas externas (Kick, YouTube, Instagram, Discord) e estrutura otimizada para baixo acoplamento, alta performance e fácil manutenção. Projeto estático, orientado à experiência do usuário e identidade visual temática.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">HTML</span>
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">CSS</span>
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">JavaScript</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/ryanpanzarini3/Site-Fire-house" class="flex items-center text-primary hover:text-white transition-all duration-300">
+                            <i data-feather="external-link" class="w-4 h-4 mr-2"></i> <span data-i18n="common.live">Live Demo</span>
+                        </a>
+                        <a href="https://www.firehouseclub.com.br" class="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                            <i data-feather="github" class="w-4 h-4 mr-2"></i> <span data-i18n="common.source">Source Code</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                    <div class="mb-6 h-48 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center">
+                        <img src="imagens/Imagem do WhatsApp de 2025-06-12 à(s) 14.30.55_0bdcaffc.jpg" alt="FireHouseGrid" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2" data-i18n="projects.grid.title">Grid Fire House Club</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="projects.grid.desc">Aplicação front-end estática desenvolvida com HTML5, CSS3 e JavaScript Vanilla, projetada para suporte a batalhas e roleplay em tempo real durante sessões de RPG. Implementa sistema de grid visual, interação direta via DOM e lógica client-side para organização espacial, facilitando controle tático e imersão narrativa sem dependência de backend.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">HTML</span>
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">CSS</span>
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">JavaScript</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/ryanpanzarini3/GridFireHouse" class="flex items-center text-primary hover:text-white transition-all duration-300">
+                            <i data-feather="external-link" class="w-4 h-4 mr-2"></i> <span data-i18n="common.live">Live Demo</span>
+                        </a>
+                        <a href="https://ryanpanzarini3.github.io/GridFireHouse/" class="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                            <i data-feather="github" class="w-4 h-4 mr-2"></i> <span data-i18n="common.source">Source Code</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+                    <div class="mb-6 h-48 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center">
+                        <img src="imagens/1.png" alt="FireHouse" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2" data-i18n="projects.cafeteria.title">Cafeteria Panzarini</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="projects.cafeteria.desc">Desenvolvido com HTML, TailwindCSS e JavaScript. O site apresenta o cardápio completo de cafés e lanches com um design acolhedor e responsivo. Conta com integração direta ao WhatsApp pelo front-end, facilitando pedidos e encomendas com apenas um clique.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">JavaScript</span>
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">HTML</span>
+                        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">TailwindCSS</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://ryanpanzarini.github.io/Projeto-Cafeteria/" class="flex items-center text-primary hover:text-white transition-all duration-300">
+                            <i data-feather="external-link" class="w-4 h-4 mr-2"></i> <span data-i18n="common.live">Live Demo</span>
+                        </a>
+                        <a href="https://github.com/RyanPanzarini/Projeto-Cafeteria" class="flex items-center text-gray-400 hover:text-white transition-all duration-300">
+                            <i data-feather="github" class="w-4 h-4 mr-2"></i> <span data-i18n="common.source">Source Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6" data-i18n="about.title">ENGINEERING PROFILE</h2>
+                    <div class="w-20 h-1 bg-primary mb-8"></div>
+                    <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="about.text">
+                        Sou Ryan Panzarini Paes, graduando do 6º semestre da Universidade Cesumar em Ponta Grossa/PR, com foco no desenvolvimento de software. Atualmente, atuo como analista de dados, aplicando e aprimorando minhas habilidades em projetos práticos. Além da graduação, concluí diversos cursos complementares em linguagens e tecnologias como Python e Node.js, o que reforça minha paixão por aprendizado contínuo e inovação. Meu objetivo é consolidar uma carreira de sucesso, contribuindo com soluções eficientes e criativas no mercado de tecnologia.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="Arquivos/Ryan_Panzarini_CV_v2 (1).pdf" class="px-6 py-3 bg-primary text-dark font-bold rounded-md hover:bg-primary/90 transition-all duration-300" data-i18n="about.cv">
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-darker p-8 rounded-lg border border-gray-800">
+                        <h3 class="text-xl font-bold text-white mb-6 font-mono" data-i18n="about.log">SYSTEM LOG</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                    <i data-feather="code" class="text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold">2024 — Present</h4>
+                                    <p class="text-gray-400" data-i18n="about.experience">Estágio Analise de Dados</p>
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4" data-i18n="contact.title">SYSTEM CONNECTION</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="max-w-md mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="mailto:dev.panzarini@gmail.com" class="contact-card bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 text-center">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="mail" class="text-primary"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2" data-i18n="contact.email.title">Email</h3>
+                        <p class="text-gray-400">dev.panzarini@gmail.com</p>
+                    </a>
+                    <a href="https://github.com/RyanPanzarini" target="_blank" class="contact-card bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 text-center">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                            <i data-feather="github" class="text-primary"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2" data-i18n="contact.github.title">GitHub</h3>
+                        <p class="text-gray-400">https://github.com/RyanPanzarini</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-primary font-mono text-xl font-bold" data-i18n="footer.social">Social</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-primary transition-all duration-300">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ryan-panzarini-137521265/" class="text-gray-400 hover:text-primary transition-all duration-300">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://github.com/RyanPanzarini" class="text-gray-400 hover:text-primary transition-all duration-300">
+                        <i data-feather="github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                <p data-i18n="footer.copyright">© 2026 Ryan Panzarini Paes. All systems operational.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
