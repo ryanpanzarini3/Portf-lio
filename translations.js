@@ -1,17 +1,44 @@
 const translations = {
   pt: {
-    nav: {
-      home: 'Home',
-      skills: 'Skills',
-      projects: 'Projetos',
-      about: 'Sobre',
-      contact: 'Contato'
-    },
     hero: {
       software: 'SOFTWARE',
       engineer: 'ENGINEER',
-      subtitle: 'Software Engineer • Especialista Front-End • Dados & Sistemas',
+      full: 'ENGENHEIRO DE SOFTWARE',
+      subtitle: 'Engenheiro de Software • Especialista Front-End • Dados & Sistemas',
       button: 'Ver Meus Trabalhos'
+    },
+    services: {
+      title: 'SERVIÇOS',
+      landing: {
+        title: 'Landing Page',
+        desc: 'Site estático focado em conversão. Ideal para apresentar seus produtos, serviços ou projeto com design moderno e responsivo.',
+        feature1: 'Design responsivo',
+        feature2: 'SEO otimizado',
+        feature3: 'Rápido e leve',
+        price: 'A partir de R$ 800'
+      },
+      full: {
+        title: 'Website Completo',
+        desc: 'Site profissional com múltiplas páginas, blog, galeria e formulários. Perfeito para empresas e negócios.',
+        feature1: 'Design customizado',
+        feature2: 'Múltiplas páginas',
+        feature3: 'Formulários funcionais',
+        feature4: 'Blog integrado',
+        price: 'A partir de R$ 2.000'
+      },
+      ecom: {
+        title: 'E-commerce',
+        desc: 'Loja online completa com carrinho, pagamento integrado e gestão de produtos. Comece a vender online.',
+        feature1: 'Carrinho de compras',
+        feature2: 'Pagamento integrado',
+        feature3: 'Gestão de produtos',
+        feature4: 'Dashboard admin',
+        price: 'A partir de R$ 4.000'
+      },
+      badge_popular: 'MAIS POPULAR',
+      button_request: 'Orçamento',
+      cta_text: 'Não encontrou o serviço que procura?',
+      cta_button: 'Fale Comigo'
     },
     skills: {
       title: 'TECH STACK',
@@ -64,6 +91,101 @@ const translations = {
       copyright: '© 2026 Ryan Panzarini Paes. Todos os sistemas operacionais.'
     }
   },
+  es: {
+    nav: {
+      home: 'Inicio',
+      skills: 'Habilidades',
+      projects: 'Proyectos',
+      about: 'Sobre mí',
+      contact: 'Contacto'
+    },
+    hero: {
+      software: 'SOFTWARE',
+      engineer: 'ENGINEER',
+      full: 'INGENIERO DE SOFTWARE',
+      subtitle: 'Ingeniero de Software • Especialista Front-End • Datos y Sistemas',
+      button: 'Ver Mi Trabajo'
+    },
+    services: {
+      title: 'SERVICIOS',
+      landing: {
+        title: 'Landing Page',
+        desc: 'Sitio estático enfocado en la conversión. Ideal para presentar tus productos, servicios o proyecto con un diseño moderno y responsivo.',
+        feature1: 'Diseño responsivo',
+        feature2: 'SEO optimizado',
+        feature3: 'Rápido y ligero',
+        price: 'Desde $ 160'
+      },
+      full: {
+        title: 'Sitio Web Completo',
+        desc: 'Sitio profesional multi-página con blog, galería y formularios. Ideal para empresas y negocios.',
+        feature1: 'Diseño personalizado',
+        feature2: 'Múltiples páginas',
+        feature3: 'Formularios funcionales',
+        feature4: 'Blog integrado',
+        price: 'Desde $ 400'
+      },
+      ecom: {
+        title: 'E-commerce',
+        desc: 'Tienda online completa con carrito, pagos integrados y gestión de productos. Empieza a vender en línea.',
+        feature1: 'Carrito de compras',
+        feature2: 'Pagos integrados',
+        feature3: 'Gestión de productos',
+        feature4: 'Panel de administración',
+        price: 'Desde $ 800'
+      },
+      badge_popular: 'MÁS POPULAR',
+      button_request: 'Solicitar Presupuesto',
+      cta_text: '¿No encontraste el servicio que buscas?',
+      cta_button: 'Contáctame'
+    },
+    skills: {
+      title: 'TECH STACK',
+      frontend: 'Front-End',
+      backend: 'Back-End',
+      data: 'Análisis de Datos',
+      systems: 'Sistemas'
+    },
+    projects: {
+      title: 'PROYECTOS',
+      includipg: {
+        title: 'IncluiPG',
+        desc: 'Sistema en desarrollo con el objetivo de aumentar la inclusión y accesibilidad en la ciudad de Ponta Grossa.'
+      },
+      firehouse: {
+        title: 'Fire House Club',
+        desc: 'Aplicación front-end de una sola página desarrollada con HTML5 semántico, CSS3 responsivo y JavaScript Vanilla. Implementa componentes interactivos del lado del cliente, integración con plataformas externas y una estructura optimizada para alto rendimiento y fácil mantenimiento.'
+      },
+      grid: {
+        title: 'Grid Fire House Club',
+        desc: 'Aplicación front-end estática diseñada para soportar batallas y roleplay en tiempo real durante sesiones de RPG. Implementa un sistema de cuadrícula visual, interacción directa con el DOM y lógica cliente para organización espacial.'
+      },
+      cafeteria: {
+        title: 'Cafeteria Panzarini',
+        desc: 'Desarrollado con HTML, TailwindCSS y JavaScript. El sitio presenta el menú completo de cafés y aperitivos con un diseño acogedor y responsivo. Integración directa con WhatsApp para pedidos.'
+      }
+    },
+    common: {
+      live: 'Demo en Vivo',
+      source: 'Código Fuente'
+    },
+    about: {
+      title: 'PERFIL',
+      text: 'Soy Ryan Panzarini Paes, estudiante del 6º semestre en la Universidad Cesumar en Ponta Grossa/PR, enfocado en desarrollo de software. Actualmente trabajo como analista de datos, aplicando y mejorando mis habilidades en proyectos prácticos.',
+      cv: 'Descargar CV',
+      log: 'SYSTEM LOG',
+      experience: 'Pasantía en Análisis de Datos'
+    },
+    contact: {
+      title: 'CONECTAR',
+      email: { title: 'Correo' },
+      github: { title: 'GitHub' }
+    },
+    footer: {
+      social: 'Social',
+      copyright: '© 2026 Ryan Panzarini Paes. Todos los sistemas operativos.'
+    }
+  },
   en: {
     nav: {
       home: 'Home',
@@ -75,8 +197,42 @@ const translations = {
     hero: {
       software: 'SOFTWARE',
       engineer: 'ENGINEER',
+      full: 'SOFTWARE ENGINEER',
       subtitle: 'Software Engineer • Front-End Specialist • Data & Systems',
       button: 'View My Work'
+    },
+    services: {
+      title: 'SERVICES',
+      landing: {
+        title: 'Landing Page',
+        desc: 'Static landing site focused on conversion. Perfect to present your products, services or project with a modern responsive design.',
+        feature1: 'Responsive design',
+        feature2: 'SEO optimized',
+        feature3: 'Fast and lightweight',
+        price: 'From $ 160'
+      },
+      full: {
+        title: 'Full Website',
+        desc: 'Professional multi-page website with blog, gallery and forms. Ideal for companies and businesses.',
+        feature1: 'Custom design',
+        feature2: 'Multiple pages',
+        feature3: 'Functional forms',
+        feature4: 'Integrated blog',
+        price: 'From $ 400'
+      },
+      ecom: {
+        title: 'E-commerce',
+        desc: 'Complete online store with cart, integrated payments and product management. Start selling online.',
+        feature1: 'Shopping cart',
+        feature2: 'Integrated payments',
+        feature3: 'Product management',
+        feature4: 'Admin dashboard',
+        price: 'From $ 800'
+      },
+      badge_popular: 'MOST POPULAR',
+      button_request: 'Request Quote',
+      cta_text: 'Didn\'t find the service you need?',
+      cta_button: 'Talk to Me'
     },
     skills: {
       title: 'TECH STACK',
@@ -140,8 +296,42 @@ const translations = {
     hero: {
       software: 'INGEGNERE',
       engineer: 'SOFTWARE',
+      full: 'INGEGNERE SOFTWARE',
       subtitle: 'Ingegnere del Software • Specialista Front-End • Dati e Sistemi',
       button: 'Visualizza I Miei Lavori'
+    },
+    services: {
+      title: 'SERVIZI',
+      landing: {
+        title: 'Landing Page',
+        desc: 'Sito statico incentrato sulla conversione. Perfetto per presentare i tuoi prodotti, servizi o progetto con un design moderno e responsive.',
+        feature1: 'Design responsive',
+        feature2: 'SEO ottimizzato',
+        feature3: 'Veloce e leggero',
+        price: 'Da $ 160'
+      },
+      full: {
+        title: 'Sito Completo',
+        desc: 'Sito professionale multi-pagina con blog, galleria e form. Ideale per aziende e attività commerciali.',
+        feature1: 'Design personalizzato',
+        feature2: 'Pagine multiple',
+        feature3: 'Form funzionanti',
+        feature4: 'Blog integrato',
+        price: 'Da $ 400'
+      },
+      ecom: {
+        title: 'E-commerce',
+        desc: 'Negozio online completo con carrello, pagamenti integrati e gestione prodotti. Inizia a vendere online.',
+        feature1: 'Carrello',
+        feature2: 'Pagamenti integrati',
+        feature3: 'Gestione prodotti',
+        feature4: 'Pannello admin',
+        price: 'Da $ 800'
+      },
+      badge_popular: 'PIÙ POPOLARE',
+      button_request: 'Richiedi Preventivo',
+      cta_text: 'Non hai trovato il servizio che cerchi?',
+      cta_button: 'Contattami'
     },
     skills: {
       title: 'STACK TECNOLOGICO',
@@ -203,6 +393,7 @@ function setLanguage(lang) {
   currentLanguage = lang;
   localStorage.setItem('language', lang);
   updatePageText();
+  window.dispatchEvent(new Event('translationsReady'));
 }
 
 function updatePageText() {
@@ -213,10 +404,15 @@ function updatePageText() {
     let text = translations[currentLanguage];
     
     for (let key of keys) {
-      text = text[key];
+      if (text && Object.prototype.hasOwnProperty.call(text, key)) {
+        text = text[key];
+      } else {
+        text = '';
+        break;
+      }
     }
-    
-    element.textContent = text;
+
+    element.textContent = text || '';
   });
 }
 
@@ -231,4 +427,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   updatePageText();
+  // Notify other scripts that translations have been applied
+  window.dispatchEvent(new Event('translationsReady'));
 });
