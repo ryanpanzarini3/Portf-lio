@@ -85,6 +85,19 @@ document.addEventListener('DOMContentLoaded', function() {
             <a href="#projects" class="text-gray-300 hover:text-primary text-lg py-2 transition-all duration-300">Projects</a>
             <a href="#about" class="text-gray-300 hover:text-primary text-lg py-2 transition-all duration-300">About</a>
             <a href="#contact" class="text-gray-300 hover:text-primary text-lg py-2 transition-all duration-300">Contact</a>
+            <div class="border-t border-gray-700 pt-6 mt-6">
+                <div class="flex items-center gap-3">
+                    <select id="mobile-language-selector" class="flex-1 bg-dark border border-gray-700 text-gray-200 px-3 py-2 rounded-md text-sm font-medium hover:border-primary transition-all duration-300 cursor-pointer">
+                        <option value="pt">Português</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="it">Italiano</option>
+                    </select>
+                    <div id="mobile-lang-flag" class="flex items-center justify-center w-8 h-6 rounded border border-primary/50 overflow-hidden flex-shrink-0">
+                        <img src="imagens/bandeira-do-brasil_1401-76.avif" alt="PT" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
         </div>
     `;
     document.body.appendChild(mobileMenu);
@@ -214,6 +227,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Language flag indicator with images
     const languageSelector = document.getElementById('language-selector');
     const langFlag = document.getElementById('lang-flag');
+    const mobileLanguageSelector = document.getElementById('mobile-language-selector');
+    const mobileLangFlag = document.getElementById('mobile-lang-flag');
     
     if (languageSelector && langFlag) {
         const flagImages = {
@@ -228,21 +243,81 @@ document.addEventListener('DOMContentLoaded', function() {
             if (imageSrc && langFlag) {
                 langFlag.innerHTML = `<img src="${imageSrc}" alt="${lang.toUpperCase()}" class="w-full h-full object-cover">`;
             }
+            // Update mobile flag too
+            if (imageSrc && mobileLangFlag) {
+                mobileLangFlag.innerHTML = `<img src="${imageSrc}" alt="${lang.toUpperCase()}" class="w-full h-full object-cover">`;
+            }
         }
         
         // Set initial flag
         const currentLang = localStorage.getItem('language') || 'pt';
         updateFlagDisplay(currentLang);
         
-        // Update flag when language changes
+        // Update flag when desktop language changes
         languageSelector.addEventListener('change', (e) => {
             updateFlagDisplay(e.target.value);
+            // Sync mobile selector
+            if (mobileLanguageSelector) {
+                mobileLanguageSelector.value = e.target.value;
+            }
         });
+        
+        // Update flag when mobile language changes
+        if (mobileLanguageSelector) {
+            mobileLanguageSelector.addEventListener('change', (e) => {
+                updateFlagDisplay(e.target.value);
+                // Sync desktop selector
+                languageSelector.value = e.target.value;
+            });
+        }
         
         // Also listen to translations update
         window.addEventListener('translationsReady', () => {
             const activeLang = localStorage.getItem('language') || 'pt';
             updateFlagDisplay(activeLang);
+            // Sync both selectors
+            if (languageSelector) languageSelector.value = activeLang;
+            if (mobileLanguageSelector) mobileLanguageSelector.value = activeLang;
         });
     }
+
+    // Mobile Device Carousel Enhancement
+    const initializeCarousels = () => {
+        const carouselContainers = document.querySelectorAll('.carousel-container');
+        
+        carouselContainers.forEach(container => {
+            // Enable smooth scroll snapping
+            container.addEventListener('scroll', () => {
+                // Optionally add visual feedback here if needed
+            });
+
+            // Touch support for better mobile experience
+            let startX = 0;
+            let scrollLeft = 0;
+
+            container.addEventListener('mousedown', (e) => {
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+            });
+
+            container.addEventListener('mouseleave', () => {
+                startX = 0;
+            });
+
+            container.addEventListener('mouseup', () => {
+                startX = 0;
+            });
+
+            container.addEventListener('mousemove', (e) => {
+                if (startX === 0) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const walk = (x - startX) * 1;
+                container.scrollLeft = scrollLeft - walk;
+            });
+        });
+    };
+
+    // Initialize carousels on page load
+    initializeCarousels();
 });
