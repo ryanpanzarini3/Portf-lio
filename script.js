@@ -210,4 +210,39 @@ document.addEventListener('DOMContentLoaded', function() {
     revealItems.forEach(item => {
         observer.observe(item);
     });
+
+    // Language flag indicator with images
+    const languageSelector = document.getElementById('language-selector');
+    const langFlag = document.getElementById('lang-flag');
+    
+    if (languageSelector && langFlag) {
+        const flagImages = {
+            'pt': 'imagens/bandeira-do-brasil_1401-76.avif',
+            'en': 'imagens/bandeira-dos-estados-unidos-da-america_1401-253.avif',
+            'es': 'imagens/bandeira-da-espanha_1401-228.avif',
+            'it': 'imagens/bandeiraItalia.jpg'
+        };
+        
+        function updateFlagDisplay(lang) {
+            const imageSrc = flagImages[lang];
+            if (imageSrc && langFlag) {
+                langFlag.innerHTML = `<img src="${imageSrc}" alt="${lang.toUpperCase()}" class="w-full h-full object-cover">`;
+            }
+        }
+        
+        // Set initial flag
+        const currentLang = localStorage.getItem('language') || 'pt';
+        updateFlagDisplay(currentLang);
+        
+        // Update flag when language changes
+        languageSelector.addEventListener('change', (e) => {
+            updateFlagDisplay(e.target.value);
+        });
+        
+        // Also listen to translations update
+        window.addEventListener('translationsReady', () => {
+            const activeLang = localStorage.getItem('language') || 'pt';
+            updateFlagDisplay(activeLang);
+        });
+    }
 });
