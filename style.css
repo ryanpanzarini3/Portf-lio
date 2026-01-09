@@ -330,3 +330,106 @@ body {
     animation-delay: 4s;
 }
 
+/* Devices Overlay Layout (Desktop) */
+@media (min-width: 769px) {
+    .devices-carousel {
+        position: relative;
+        width: 100%;
+        height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Desktop mockup as base */
+    .desktop-mockup-container {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    /* Mobile mockup overlay */
+    .mobile-mockup-overlay {
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+        animation: float-mobile-overlay 3.5s ease-in-out infinite;
+    }
+
+    @keyframes float-mobile-overlay {
+        0%, 100% {
+            transform: translateY(-50%) translateX(0) rotateZ(-5deg);
+        }
+        50% {
+            transform: translateY(-60%) translateX(-10px) rotateZ(-2deg);
+        }
+    }
+
+    .desktop-mockup-container .bg-gray-800 {
+        animation: float-desktop-mockup 3s ease-in-out infinite;
+    }
+
+    @keyframes float-desktop-mockup {
+        0%, 100% {
+            transform: translateY(0) rotateZ(2deg);
+        }
+        50% {
+            transform: translateY(-15px) rotateZ(-1deg);
+        }
+    }
+}
+
+/* Mobile Device Carousel */
+@media (max-width: 768px) {
+    .devices-carousel {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .carousel-container {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 12px;
+    }
+    
+    /* Hide scrollbar but keep scrolling functionality */
+    .carousel-container::-webkit-scrollbar {
+        height: 6px;
+    }
+    
+    .carousel-container::-webkit-scrollbar-track {
+        background: rgba(14, 165, 233, 0.1);
+        border-radius: 3px;
+    }
+    
+    .carousel-container::-webkit-scrollbar-thumb {
+        background: #0ea5e9;
+        border-radius: 3px;
+    }
+    
+    .carousel-item {
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+        display: flex;
+        justify-content: center;
+        min-width: 100%;
+    }
+    
+    .device-label {
+        text-align: center;
+        font-size: 12px;
+        color: #a1a5b1;
+        margin-bottom: 8px;
+        height: 16px;
+        font-weight: 500;
+    }
+}
+
