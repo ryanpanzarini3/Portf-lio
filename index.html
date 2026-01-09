@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan Panzarini | Portfólio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23020617'/><g transform='translate(50,50)' stroke='%230ea5e9' stroke-width='4' fill='none'><path d='M -25,-15 L -10,0 L -25,15' stroke-linecap='round' stroke-linejoin='round'/><path d='M 25,-15 L 10,0 L 25,15' stroke-linecap='round' stroke-linejoin='round'/><line x1='-5' y1='-20' x2='5' y2='20' stroke-linecap='round'/></g></svg>">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
@@ -29,29 +30,38 @@
 </head>
 <body class="bg-darker text-gray-300 font-sans overflow-x-hidden">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-dark/90 backdrop-blur-sm z-50 border-b border-gray-800">
+    <nav class="fixed w-full bg-dark/95 backdrop-blur-md z-50 border-b border-gray-700 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <span class="text-primary font-mono text-xl font-bold">Ryan Panzarini</span>
+                    <span class="text-primary font-mono text-xl font-bold flex items-center gap-2">
+                        <i data-feather="code" class="w-5 h-5"></i>
+                        Ryan Panzarini
+                        <i data-feather="zap" class="w-5 h-5"></i>
+                    </span>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-6">
-                        <a href="#hero" class="nav-link text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.home">Home</a>
-                        <a href="#skills" class="nav-link text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.skills">Skills</a>
-                        <a href="#projects" class="nav-link text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.projects">Projects</a>
-                        <a href="#about" class="nav-link text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.about">About</a>
-                        <a href="#contact" class="nav-link text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.contact">Contact</a>
-                        <select id="language-selector" class="bg-dark border border-gray-700 text-gray-300 px-3 py-2 rounded-md text-sm font-medium hover:border-primary transition-all duration-300 cursor-pointer">
-                            <option value="pt">Português</option>
-                            <option value="en">English</option>
-                            <option value="es">Español</option>
-                            <option value="it">Italiano</option>
-                        </select>
+                        <a href="#hero" class="nav-link text-gray-200 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.home">Home</a>
+                        <a href="#skills" class="nav-link text-gray-200 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.skills">Skills</a>
+                        <a href="#projects" class="nav-link text-gray-200 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.projects">Projects</a>
+                        <a href="#about" class="nav-link text-gray-200 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.about">About</a>
+                        <a href="#contact" class="nav-link text-gray-200 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.contact">Contact</a>
+                        <div class="flex items-center gap-3">
+                            <select id="language-selector" class="bg-dark border border-gray-700 text-gray-200 px-3 py-2 rounded-md text-sm font-medium hover:border-primary transition-all duration-300 cursor-pointer">
+                                <option value="pt">Português</option>
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="it">Italiano</option>
+                            </select>
+                            <div id="lang-flag" class="flex items-center justify-center w-8 h-6 rounded border border-primary/50 overflow-hidden">
+                                <img src="imagens/bandeira-do-brasil_1401-76.avif" alt="PT" class="w-full h-full object-cover">
+                            </div>
+                        </div>
                     </div>                  
                 </div>
                 <div class="md:hidden">
-                    <button id="menu-toggle" class="text-gray-300 hover:text-primary focus:outline-none">
+                    <button id="menu-toggle" class="text-gray-200 hover:text-primary focus:outline-none">
                         <i data-feather="menu"></i>
                     </button>
                 </div>
@@ -60,19 +70,25 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center bg-fixed" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><defs><style>.code{font-family:monospace;font-size:14px;fill:%23088cff;opacity:0.1;animation:float 8s infinite ease-in-out;}.floating{animation:float 8s infinite ease-in-out;}</style><script type=%22text/javascript%22><![CDATA[]]></script></defs><text x=%2250%22 y=%2250%22 class=%22code%22>&lt;div class=%27code%27&gt;</text><text x=%22100%22 y=%2150%22 class=%22code%22>const developer = true;</text><text x=%22200%22 y=%22250%22 class=%22code%22>function deploy() {}</text><text x=%2250%22 y=%22350%22 class=%22code%22>&lt;/div&gt;</text><circle cx=%22600%22 cy=%22400%22 r=%22150%22 fill=%22none%22 stroke=%22%23088cff%22 opacity=%220.2%22/><circle cx=%22600%22 cy=%22400%22 r=%22200%22 fill=%22none%22 stroke=%22%2300d4ff%22 opacity=%220.1%22/></svg>');">
         <div class="absolute inset-0 bg-grid-dark opacity-20"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-dark/50 to-darker/90"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark/60 to-darker/95"></div>
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" style="background-color: #0ea5e9;"></div>
+            <div class="absolute top-40 right-10 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" style="background-color: #06b6d4;"></div>
+            <div class="absolute -bottom-8 left-20 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000" style="background-color: #0ea5e9;"></div>
+        </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 animate-fade-in">
-                <span id="typing-text" class="text-primary font-mono text-5xl md:text-7xl"></span><span id="typing-cursor" class="typing-cursor">▍</span>
+            <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-fade-in">
+                <span id="typing-text" class="text-primary font-mono text-3xl sm:text-4xl md:text-6xl lg:text-7xl"></span><span id="typing-cursor" class="typing-cursor">▍</span>
                 <span id="full-hero-text" class="sr-only" data-i18n="hero.full">SOFTWARE ENGINEER</span>
             </h1>
-            <div class="text-xl md:text-2xl font-mono text-gray-400 mb-8 animate-fade-in delay-100">
+            <div class="text-base sm:text-lg md:text-xl lg:text-2xl font-mono text-gray-400 mb-8 animate-fade-in delay-100 px-2">
                 <span class="text-primary">>></span> <span data-i18n="hero.subtitle">Software Engineer • Front-End Specialist • Data & Systems</span>
             </div>
             <div class="animate-fade-in delay-200">
-                <a href="#projects" class="inline-flex items-center px-6 py-3 border border-primary text-primary font-mono rounded-md hover:bg-primary/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+                <a href="#projects" class="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 border border-primary text-primary font-mono text-sm sm:text-base rounded-md hover:bg-primary/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
                     <span data-i18n="hero.button">View My Work</span> <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
                 </a>
             </div>
@@ -101,20 +117,20 @@
                 </div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
                 <!-- Skill Card 1 - Front-End -->
                 <div class="skill-card-graphic group relative">
                     <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/0 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                    <div class="relative bg-gradient-to-br from-dark to-darker p-8 rounded-2xl border border-gray-700 hover:border-primary/50 transition-all duration-300 overflow-hidden h-full">
+                    <div class="relative bg-gradient-to-br from-dark to-darker p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-primary/50 transition-all duration-300 overflow-hidden h-full">
                         <!-- Background pattern -->
                         <div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-full blur-2xl -z-10 group-hover:bg-primary/20 transition-all duration-300"></div>
                         
                         <div class="flex flex-col items-center text-center relative z-10">
-                            <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-all duration-300 group-hover:scale-110">
-                                <i data-feather="code" class="text-primary w-8 h-8"></i>
+                            <div class="w-14 sm:w-16 h-14 sm:h-16 rounded-full bg-primary/20 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/30 transition-all duration-300 group-hover:scale-110">
+                                <i data-feather="code" class="text-primary w-6 sm:w-8 h-6 sm:h-8"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300" data-i18n="skills.frontend">Front-End</h3>
-                            <p class="text-sm text-gray-400 mb-4">HTML5, CSS3, JavaScript, React</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300" data-i18n="skills.frontend">Front-End</h3>
+                            <p class="text-xs sm:text-sm text-gray-400 mb-4">HTML5, CSS3, JavaScript, React</p>
                             
                             <!-- Skill indicator bars -->
                             <div class="w-full">
@@ -133,16 +149,16 @@
                 <!-- Skill Card 2 - Back-End -->
                 <div class="skill-card-graphic group relative">
                     <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/0 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                    <div class="relative bg-gradient-to-br from-dark to-darker p-8 rounded-2xl border border-gray-700 hover:border-primary/50 transition-all duration-300 overflow-hidden h-full">
+                    <div class="relative bg-gradient-to-br from-dark to-darker p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-primary/50 transition-all duration-300 overflow-hidden h-full">
                         <!-- Background pattern -->
                         <div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-full blur-2xl -z-10 group-hover:bg-primary/20 transition-all duration-300"></div>
                         
                         <div class="flex flex-col items-center text-center relative z-10">
-                            <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-all duration-300 group-hover:scale-110">
-                                <i data-feather="cpu" class="text-primary w-8 h-8"></i>
+                            <div class="w-14 sm:w-16 h-14 sm:h-16 rounded-full bg-primary/20 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/30 transition-all duration-300 group-hover:scale-110">
+                                <i data-feather="cpu" class="text-primary w-6 sm:w-8 h-6 sm:h-8"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300" data-i18n="skills.backend">Back-End</h3>
-                            <p class="text-sm text-gray-400 mb-4">Node.js, Java, Python, C#</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300" data-i18n="skills.backend">Back-End</h3>
+                            <p class="text-xs sm:text-sm text-gray-400 mb-4">Node.js, Java, Python, C#</p>
                             
                             <!-- Skill indicator bars -->
                             <div class="w-full">
@@ -244,9 +260,9 @@
                             <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="projects.includipg.desc">Sistema em desenvolvimento com a proposta de aumentar a inclusão e acessibilidade na cidade de Ponta Grossa.</p>
                             
                             <div class="flex flex-wrap gap-2 mb-8">
-                                <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">React</span>
-                                <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">D3.js</span>
-                                <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">Node.js</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">HTML</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">JavaScript</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">TailwindCSS</span>
                             </div>
                             
                             <div class="flex space-x-6">
@@ -278,7 +294,7 @@
                                     </div>
                                     <!-- Content -->
                                     <div class="overflow-hidden" style="height: 200px;">
-                                        <img src="imagens/Acessibilidade-1-696x465.png" alt="IncluiPG Mac" class="w-full h-full object-cover">
+                                        <img src="imagens/IncluiPgDesktop.jpeg" alt="IncluiPG Mac" class="w-full h-full object-cover">
                                     </div>
                                 </div>
                                 <!-- Mac Stand -->
@@ -296,7 +312,7 @@
                                     </div>
                                     <!-- Content -->
                                     <div class="w-full bg-white overflow-hidden" style="height: 250px;">
-                                        <img src="imagens/Acessibilidade-1-696x465.png" alt="IncluiPG iPhone" class="w-full h-full object-cover">
+                                        <img src="imagens/IncluiPgMobile.jpeg" alt="IncluiPG iPhone" class="w-full h-full object-cover">
                                     </div>
                                     <!-- iPhone Home Indicator -->
                                     <div class="bg-black px-4 py-1.5 flex justify-center">
@@ -309,26 +325,28 @@
                 </div>
                 
                 <!-- Project 2: Fire House Club -->
-                <div class="reveal-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div class="flex justify-center">
+                <div class="reveal-item grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 items-center">
+                    <div class="flex justify-center order-2 lg:order-1">
                         <!-- Mockup Devices -->
-                        <div class="relative h-96">
+                        <div class="relative h-64 sm:h-80 md:h-96 w-full max-w-sm">
                             <!-- Mac Mockup -->
-                            <div class="absolute -left-8 top-0 device-mockup-desktop">
-                                <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border-8 border-gray-900" style="width: 340px;">
+                            <div class="absolute left-0 sm:left-0 lg:-left-8 top-0 device-mockup-desktop w-full">
+                                <div class="bg-gray-800 rounded-lg sm:rounded-2xl shadow-2xl overflow-hidden border-4 sm:border-8 border-gray-900 w-full" style="max-width: 340px; margin: 0 auto;">
                                     <!-- Mac Top Bar -->
-                                    <div class="bg-gray-700 px-4 py-2 flex items-center justify-between h-7">
-                                        <div class="flex items-center gap-1.5">
-                                            <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
-                                            <div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
-                                            <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                                    <div class="bg-gray-700 px-3 sm:px-4 py-1 sm:py-2 flex items-center justify-between h-6 sm:h-7">
+                                        <div class="flex items-center gap-1">
+                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-red-500"></div>
+                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-yellow-500"></div>
+                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-green-500"></div>
                                         </div>
                                         <span class="text-xs text-gray-400 font-semibold">Project</span>
-                                        <div class="w-6"></div>
+                                        <div class="w-4 sm:w-6"></div>
                                     </div>
                                     <!-- Content -->
-                                    <div class="overflow-hidden" style="height: 200px;">
-                                        <img src="imagens/Imagem do WhatsApp de 2025-06-12 à(s) 14.30.55_0bdcaffc.jpg" alt="Fire House Mac" class="w-full h-full object-cover">
+                                    <div class="overflow-hidden" style="height: 120px;">
+                                        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+                                            <source src="videos/VideoFireHouse.mp4" type="video/mp4">
+                                        </video>
                                     </div>
                                 </div>
                                 <!-- Mac Stand -->
@@ -346,7 +364,9 @@
                                     </div>
                                     <!-- Content -->
                                     <div class="w-full bg-white overflow-hidden" style="height: 250px;">
-                                        <img src="imagens/Imagem do WhatsApp de 2025-06-12 à(s) 14.30.55_0bdcaffc.jpg" alt="Fire House iPhone" class="w-full h-full object-cover">
+                                        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+                                            <source src="videos/VideoFireHouseMobile.mp4" type="video/mp4">
+                                        </video>
                                     </div>
                                     <!-- iPhone Home Indicator -->
                                     <div class="bg-black px-4 py-1.5 flex justify-center">
@@ -357,11 +377,11 @@
                         </div>
                     </div>
                     
-                    <div>
+                    <div class="order-1 lg:order-2">
                         <!-- Project Info -->
                         <div>
-                            <h3 class="text-3xl font-bold text-white mb-4" data-i18n="projects.firehouse.title">Fire House Club</h3>
-                            <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="projects.firehouse.desc">Single-page front-end application desenvolvida com HTML5 semântico, CSS3 responsivo e JavaScript Vanilla. Implementa componentes interativos client-side, integração com plataformas externas e estrutura otimizada para performance.</p>
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4" data-i18n="projects.firehouse.title">Fire House Club</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-6 leading-relaxed" data-i18n="projects.firehouse.desc">Single-page front-end application desenvolvida com HTML5 semântico, CSS3 responsivo e JavaScript Vanilla. Implementa componentes interativos client-side, integração com plataformas externas e estrutura otimizada para performance.</p>
                             
                             <div class="flex flex-wrap gap-2 mb-8">
                                 <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">HTML</span>
@@ -369,11 +389,11 @@
                                 <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">JavaScript</span>
                             </div>
                             
-                            <div class="flex space-x-6">
-                                <a href="https://www.firehouseclub.com.br" class="inline-flex items-center px-6 py-3 border border-primary text-primary font-mono rounded-md hover:bg-primary/10 transition-all duration-300">
+                            <div class="flex flex-col sm:flex-row gap-3 sm:gap-6">
+                                <a href="https://www.firehouseclub.com.br" class="inline-flex items-center justify-center sm:justify-start px-4 sm:px-6 py-2 sm:py-3 border border-primary text-primary font-mono text-sm sm:text-base rounded-md hover:bg-primary/10 transition-all duration-300">
                                     <i data-feather="external-link" class="w-4 h-4 mr-2"></i> <span data-i18n="common.live">Live Demo</span>
                                 </a>
-                                <a href="https://github.com/ryanpanzarini3/Site-Fire-house" class="inline-flex items-center px-6 py-3 border border-gray-700 text-gray-400 font-mono rounded-md hover:border-primary/50 hover:text-white transition-all duration-300">
+                                <a href="https://github.com/ryanpanzarini3/Site-Fire-house" class="inline-flex items-center justify-center sm:justify-start px-4 sm:px-6 py-2 sm:py-3 border border-gray-700 text-gray-400 font-mono text-sm sm:text-base rounded-md hover:border-primary/50 hover:text-white transition-all duration-300">
                                     <i data-feather="github" class="w-4 h-4 mr-2"></i> <span data-i18n="common.source">GitHub</span>
                                 </a>
                             </div>
@@ -424,7 +444,7 @@
                                     </div>
                                     <!-- Content -->
                                     <div class="overflow-hidden" style="height: 200px;">
-                                        <img src="imagens/Cafeteria.lnk" alt="Cafeteria Mac" class="w-full h-full object-cover">
+                                        <img src="imagens/CafeteriaDesktop.jpeg" alt="Cafeteria Mac" class="w-full h-full object-cover">
                                     </div>
                                 </div>
                                 <!-- Mac Stand -->
@@ -450,6 +470,229 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Repositories Section -->
+    <section id="repositories" class="py-20 bg-dark relative overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute inset-0 bg-grid-dark opacity-20"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6" data-i18n="repositories.title">EXPLORE MY CODE</h2>
+                <div class="flex items-center justify-center gap-4 mb-4">
+                    <div class="w-12 h-1 bg-gradient-to-r from-transparent to-primary mx-auto"></div>
+                    <div class="w-3 h-3 rounded-full bg-primary"></div>
+                    <div class="w-12 h-1 bg-gradient-to-l from-transparent to-primary mx-auto"></div>
+                </div>
+                <p class="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto" data-i18n="repositories.subtitle">Acesse meu perfil no GitHub para visualizar todos os meus projetos, contribuições e aprender mais sobre meu trabalho como desenvolvedor.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Main GitHub Card -->
+                <div class="group relative mb-12">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/30 via-secondary/20 to-primary/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    <div class="relative bg-gradient-to-br from-darker via-dark to-darker p-8 sm:p-12 rounded-3xl border border-gray-700 group-hover:border-primary/50 transition-all duration-300 overflow-hidden">
+                        <!-- Animated background -->
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-primary/10 rounded-full blur-3xl -z-10 group-hover:bg-primary/20 transition-all duration-300"></div>
+                        
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                            <!-- Left side - Content -->
+                            <div class="flex-1 text-center md:text-left">
+                                <div class="flex items-center justify-center md:justify-start mb-4 gap-3">
+                                    <i data-feather="github" class="w-8 h-8 text-primary"></i>
+                                    <h3 class="text-2xl sm:text-3xl font-bold text-white" data-i18n="repositories.main_title">GitHub Profile</h3>
+                                </div>
+                                <p class="text-gray-400 mb-6 text-sm sm:text-base leading-relaxed" data-i18n="repositories.main_desc">
+                                    Confira todos os meus repositórios, projetos em andamento e contribuições open-source. Meu código está organizado e bem documentado para facilitar o entendimento e colaboração.
+                                </p>
+                                
+                                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start mb-6">
+                                    <div class="text-center">
+                                        <p class="text-2xl font-bold text-primary">12+</p>
+                                        <p class="text-xs sm:text-sm text-gray-400" data-i18n="repositories.stats.repos">Repositórios Públicos</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="text-2xl font-bold text-primary">50+</p>
+                                        <p class="text-xs sm:text-sm text-gray-400" data-i18n="repositories.stats.commits">Commits</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="text-2xl font-bold text-primary">5+</p>
+                                        <p class="text-xs sm:text-sm text-gray-400" data-i18n="repositories.stats.languages">Linguagens</p>
+                                    </div>
+                                </div>
+                                
+                                <a href="https://github.com/RyanPanzarini" target="_blank" class="inline-flex items-center justify-center sm:justify-start px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary text-white font-mono rounded-lg hover:shadow-lg hover:shadow-primary/40 transition-all duration-300 font-semibold text-sm sm:text-base w-full sm:w-auto" data-i18n="repositories.visit_button">
+                                    <i data-feather="external-link" class="w-4 h-4 mr-2"></i> Visitar Perfil
+                                </a>
+                            </div>
+                            
+                            <!-- Right side - Visual Element -->
+                            <div class="flex-1 relative hidden md:flex items-center justify-center">
+                                <div class="w-full max-w-xs">
+                                    <!-- Animated code blocks -->
+                                    <div class="space-y-3">
+                                        <div class="bg-darker/50 border border-primary/30 rounded-lg p-4 transform group-hover:translate-x-2 transition-all duration-300">
+                                            <div class="flex gap-2 mb-2">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                            <p class="text-xs text-primary font-mono">function buildAwesome() {</p>
+                                        </div>
+                                        <div class="bg-darker/50 border border-secondary/30 rounded-lg p-4 ml-4 transform group-hover:translate-x-4 transition-all duration-300 delay-75">
+                                            <p class="text-xs text-secondary font-mono">  return &lt;Portfolio /&gt;</p>
+                                        </div>
+                                        <div class="bg-darker/50 border border-primary/30 rounded-lg p-4 transform group-hover:translate-x-2 transition-all duration-300 delay-100">
+                                            <p class="text-xs text-primary font-mono">}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+                <!-- Featured Repos Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <!-- Repo Card 1 -->
+                    <a href="https://github.com/RyanPanzarini/IncluiPG1" target="_blank" class="group/repo relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-xl blur-xl opacity-0 group-hover/repo:opacity-100 transition-all duration-500"></div>
+                        <div class="relative bg-gradient-to-br from-dark to-darker p-6 rounded-xl border border-gray-700 group-hover/repo:border-primary/50 transition-all duration-300 h-full flex flex-col">
+                            <div class="flex items-start justify-between mb-4">
+                                <i data-feather="folder" class="w-6 h-6 text-primary"></i>
+                                <i data-feather="star" class="w-5 h-5 text-yellow-400"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2 group-hover/repo:text-primary transition-colors">IncluiPG</h4>
+                            <p class="text-xs sm:text-sm text-gray-400 mb-4 flex-grow">Sistema para aumentar inclusão e acessibilidade em Ponta Grossa</p>
+                            <div class="flex gap-2 flex-wrap">
+                                <span class="px-2 py-1 bg-primary/20 text-primary text-xs rounded">HTML5</span>
+                                <span class="px-2 py-1 bg-primary/20 text-primary text-xs rounded">TailwindCSS</span>
+                                <span class="px-2 py-1 bg-primary/20 text-primary text-xs rounded">JavaScript</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- Repo Card 2 -->
+                    <a href="https://github.com/ryanpanzarini3/Site-Fire-house" target="_blank" class="group/repo relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-xl blur-xl opacity-0 group-hover/repo:opacity-100 transition-all duration-500"></div>
+                        <div class="relative bg-gradient-to-br from-dark to-darker p-6 rounded-xl border border-gray-700 group-hover/repo:border-primary/50 transition-all duration-300 h-full flex flex-col">
+                            <div class="flex items-start justify-between mb-4">
+                                <i data-feather="folder" class="w-6 h-6 text-primary"></i>
+                                <i data-feather="star" class="w-5 h-5 text-yellow-400"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2 group-hover/repo:text-primary transition-colors">Fire House Club</h4>
+                            <p class="text-xs sm:text-sm text-gray-400 mb-4 flex-grow">Website interativo com componentes cliente-side avançados</p>
+                            <div class="flex gap-2 flex-wrap">
+                                <span class="px-2 py-1 bg-primary/20 text-primary text-xs rounded">HTML5</span>
+                                <span class="px-2 py-1 bg-primary/20 text-primary text-xs rounded">CSS3</span>
+                                <span class="px-2 py-1 bg-primary/20 text-primary text-xs rounded">JavaScript</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Call to action -->
+                <div class="text-center mt-12">
+                    <p class="text-gray-400 text-sm sm:text-base mb-4" data-i18n="repositories.cta_text">Quer colaborar ou viu algo interessante?</p>
+                    <a href="https://wa.me/42999574674?text=Olá%20Ryan!%20Vi%20seus%20projetos%20no%20GitHub%20e%20gostaria%20de%20conversar%20sobre%20uma%20colaboração." target="_blank" class="inline-flex items-center px-6 py-3 border border-gray-700 text-gray-400 font-mono rounded-lg hover:border-primary/50 hover:text-white transition-all duration-300 text-sm sm:text-base" data-i18n="repositories.cta_button">
+                        <i data-feather="mail" class="w-4 h-4 mr-2"></i> Entre em Contato
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="py-20 bg-darker relative overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute inset-0 bg-grid-dark opacity-20"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6" data-i18n="languages.title">IDIOMAS</h2>
+                <div class="flex items-center justify-center gap-4 mb-4">
+                    <div class="w-12 h-1 bg-gradient-to-r from-transparent to-primary mx-auto"></div>
+                    <div class="w-3 h-3 rounded-full bg-primary"></div>
+                    <div class="w-12 h-1 bg-gradient-to-l from-transparent to-primary mx-auto"></div>
+                </div>
+                <p class="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto" data-i18n="languages.subtitle">Conheça os idiomas que falo e meu nível de proficiência em cada um.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Portuguese Card -->
+                    <div class="group/lang relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-xl blur-xl opacity-0 group-hover/lang:opacity-100 transition-all duration-500"></div>
+                        <div class="relative bg-gradient-to-br from-dark to-darker p-6 rounded-xl border border-gray-700 group-hover/lang:border-primary/50 transition-all duration-300 h-full flex flex-col items-center text-center">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mb-4 group-hover/lang:scale-110 transition-all border-2 border-primary/30">
+                                <img src="imagens/bandeira-do-brasil_1401-76.avif" alt="Brasil" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-2" data-i18n="languages.portuguese.name">Português</h4>
+                            <p class="text-sm text-gray-400 mb-4 font-semibold" data-i18n="languages.portuguese.level">Nativo</p>
+                            <div class="w-full bg-gray-800 rounded-full h-2 mb-2">
+                                <div class="bg-gradient-to-r from-primary to-secondary h-full rounded-full" style="width: 100%"></div>
+                            </div>
+                            <p class="text-xs text-gray-500">100%</p>
+                        </div>
+                    </div>
+                    
+                    <!-- English Card -->
+                    <div class="group/lang relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-xl blur-xl opacity-0 group-hover/lang:opacity-100 transition-all duration-500"></div>
+                        <div class="relative bg-gradient-to-br from-dark to-darker p-6 rounded-xl border border-gray-700 group-hover/lang:border-primary/50 transition-all duration-300 h-full flex flex-col items-center text-center">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mb-4 group-hover/lang:scale-110 transition-all border-2 border-primary/30">
+                                <img src="imagens/bandeira-dos-estados-unidos-da-america_1401-253.avif" alt="Estados Unidos" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-2" data-i18n="languages.english.name">English</h4>
+                            <p class="text-sm text-gray-400 mb-4 font-semibold" data-i18n="languages.english.level">Intermediário</p>
+                            <div class="w-full bg-gray-800 rounded-full h-2 mb-2">
+                                <div class="bg-gradient-to-r from-primary to-secondary h-full rounded-full" style="width: 70%"></div>
+                            </div>
+                            <p class="text-xs text-gray-500">70%</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Spanish Card -->
+                    <div class="group/lang relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-xl blur-xl opacity-0 group-hover/lang:opacity-100 transition-all duration-500"></div>
+                        <div class="relative bg-gradient-to-br from-dark to-darker p-6 rounded-xl border border-gray-700 group-hover/lang:border-primary/50 transition-all duration-300 h-full flex flex-col items-center text-center">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mb-4 group-hover/lang:scale-110 transition-all border-2 border-primary/30">
+                                <img src="imagens/bandeira-da-espanha_1401-228.avif" alt="Espanha" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-2" data-i18n="languages.spanish.name">Español</h4>
+                            <p class="text-sm text-gray-400 mb-4 font-semibold" data-i18n="languages.spanish.level">Básico</p>
+                            <div class="w-full bg-gray-800 rounded-full h-2 mb-2">
+                                <div class="bg-gradient-to-r from-primary to-secondary h-full rounded-full" style="width: 75%"></div>
+                            </div>
+                            <p class="text-xs text-gray-500">75%</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Italian Card -->
+                    <div class="group/lang relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-xl blur-xl opacity-0 group-hover/lang:opacity-100 transition-all duration-500"></div>
+                        <div class="relative bg-gradient-to-br from-dark to-darker p-6 rounded-xl border border-gray-700 group-hover/lang:border-primary/50 transition-all duration-300 h-full flex flex-col items-center text-center">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mb-4 group-hover/lang:scale-110 transition-all border-2 border-primary/30">
+                                <img src="imagens/bandeiraItalia.jpg" alt="Itália" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-2" data-i18n="languages.italian.name">Italiano</h4>
+                            <p class="text-sm text-gray-400 mb-4 font-semibold" data-i18n="languages.italian.level">Básico</p>
+                            <div class="w-full bg-gray-800 rounded-full h-2 mb-2">
+                                <div class="bg-gradient-to-r from-primary to-secondary h-full rounded-full" style="width: 40%"></div>
+                            </div>
+                            <p class="text-xs text-gray-500">40%</p>
                         </div>
                     </div>
                 </div>
@@ -505,8 +748,8 @@
                         </div>
                         
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-primary" data-i18n="services.landing.price">A partir de R$ 800</span>
-                            <button class="px-4 py-2 bg-primary/20 text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-sm" data-i18n="services.button_request">Orçamento</button>
+                            <span class="text-2xl font-bold text-primary" data-i18n="services.landing.price">A partir de R$ 200</span>
+                            <a href="https://wa.me/42999574674?text=Olá%20Ryan!%20Gostaria%20de%20um%20orçamento%20para%20uma%20Landing%20Page.%20Pode%20me%20ajudar?" target="_blank" class="px-4 py-2 bg-primary/20 text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-sm" data-i18n="services.button_request">Orçamento</a>
                         </div>
                     </div>
                 </div>
@@ -549,8 +792,8 @@
                         </div>
                         
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-primary" data-i18n="services.full.price">A partir de R$ 2.000</span>
-                            <button class="px-4 py-2 bg-primary/20 text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-sm" data-i18n="services.button_request">Orçamento</button>
+                            <span class="text-2xl font-bold text-primary" data-i18n="services.full.price">A partir de R$ 500</span>
+                            <a href="https://wa.me/42999574674?text=Olá%20Ryan!%20Gostaria%20de%20um%20orçamento%20para%20um%20Website%20Completo.%20Pode%20me%20ajudar?" target="_blank" class="px-4 py-2 bg-primary/20 text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-sm" data-i18n="services.button_request">Orçamento</a>
                         </div>
                     </div>
                 </div>
@@ -588,8 +831,8 @@
                         </div>
                         
                         <div class="flex items-center justify-between">
-                            <span class="text-2xl font-bold text-primary" data-i18n="services.ecom.price">A partir de R$ 4.000</span>
-                            <button class="px-4 py-2 bg-primary/20 text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-sm" data-i18n="services.button_request">Orçamento</button>
+                            <span class="text-2xl font-bold text-primary" data-i18n="services.ecom.price">A partir de R$ 1.250</span>
+                            <a href="https://wa.me/42999574674?text=Olá%20Ryan!%20Gostaria%20de%20um%20orçamento%20para%20um%20E-commerce.%20Pode%20me%20ajudar?" target="_blank" class="px-4 py-2 bg-primary/20 text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-sm" data-i18n="services.button_request">Orçamento</a>
                         </div>
                     </div>
                 </div>
@@ -598,7 +841,7 @@
             <!-- CTA Section -->
             <div class="mt-20 text-center">
                 <p class="text-gray-400 mb-8 text-lg" data-i18n="services.cta_text">Não encontrou o serviço que procura?</p>
-                <a href="#contact" class="inline-flex items-center px-8 py-4 bg-primary text-white font-mono rounded-lg hover:bg-primary/80 transition-all duration-300 hover:shadow-lg hover:shadow-primary/40 text-lg font-semibold">
+                <a href="https://wa.me/42999574674?text=Olá%20Ryan!%20Gostaria%20de%20conversar%20sobre%20um%20projeto%20personalizado." target="_blank" class="inline-flex items-center px-8 py-4 bg-primary text-white font-mono rounded-lg hover:bg-primary/80 transition-all duration-300 hover:shadow-lg hover:shadow-primary/40 text-lg font-semibold">
                     <span data-i18n="services.cta_button">Fale Comigo</span> <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
                 </a>
             </div>
@@ -606,55 +849,55 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-dark">
+    <section id="about" class="py-16 sm:py-20 bg-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold text-white mb-6" data-i18n="about.title">ENGINEERING PROFILE</h2>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6" data-i18n="about.title">ENGINEERING PROFILE</h2>
                     <div class="w-20 h-1 bg-primary mb-8"></div>
-                    <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="about.text">
+                    <p class="text-sm sm:text-base text-gray-400 mb-6 leading-relaxed" data-i18n="about.text">
                         Sou Ryan Panzarini Paes, graduando do 6º semestre da Universidade Cesumar em Ponta Grossa/PR, com foco no desenvolvimento de software. Atualmente, atuo como analista de dados, aplicando e aprimorando minhas habilidades em projetos práticos. Além da graduação, concluí diversos cursos complementares em linguagens e tecnologias como Python e Node.js, o que reforça minha paixão por aprendizado contínuo e inovação. Meu objetivo é consolidar uma carreira de sucesso, contribuindo com soluções eficientes e criativas no mercado de tecnologia.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="Arquivos/Ryan_Panzarini_CV_v2 (1).pdf" class="px-6 py-3 bg-primary text-dark font-bold rounded-md hover:bg-primary/90 transition-all duration-300" data-i18n="about.cv">
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="Arquivos/Ryan_Panzarini_CV_v2 (1).pdf" class="px-4 sm:px-6 py-2 sm:py-3 bg-primary text-dark font-bold rounded-md hover:bg-primary/90 transition-all duration-300 text-center sm:text-left text-sm sm:text-base" data-i18n="about.cv">
                             Download CV
                         </a>
                     </div>
                 </div>
                 <div class="relative">
-                    <div class="bg-darker p-8 rounded-lg border border-gray-800">
-                        <h3 class="text-xl font-bold text-white mb-6 font-mono" data-i18n="about.log">SYSTEM LOG</h3>
+                    <div class="bg-darker p-6 sm:p-8 rounded-lg border border-gray-800">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-6 font-mono" data-i18n="about.log">SYSTEM LOG</h3>
                         <div class="space-y-6">
                             <div class="flex items-start">
-                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                    <i data-feather="code" class="text-primary"></i>
+                                <div class="flex-shrink-0 h-8 sm:h-10 w-8 sm:w-10 rounded-full bg-primary/10 flex items-center justify-center mr-3 sm:mr-4">
+                                    <i data-feather="code" class="text-primary w-4 sm:w-5 h-4 sm:h-5"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-white font-bold">05/2024 — Present</h4>
-                                    <p class="text-gray-400" data-i18n="about.experience">Estágio Analise de Dados</p>
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Prefeitura Muncipal de Ponta Grossa</span>
+                                    <h4 class="text-white font-bold text-sm sm:text-base">05/2024 — Present</h4>
+                                    <p class="text-gray-400 text-xs sm:text-sm" data-i18n="about.experience1">Estágio Analise de Dados</p>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded inline-block">Prefeitura Muncipal de Ponta Grossa</span>
                                 </div>
                             </div>
                             <!----Job 2---->
                             <div class="flex items-start">
-                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                    <i data-feather="code" class="text-primary"></i>
+                                <div class="flex-shrink-0 h-8 sm:h-10 w-8 sm:w-10 rounded-full bg-primary/10 flex items-center justify-center mr-3 sm:mr-4">
+                                    <i data-feather="code" class="text-primary w-4 sm:w-5 h-4 sm:h-5"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-white font-bold">03/2023 — 03/2024 </h4>
-                                    <p class="text-gray-400" data-i18n="about.experience"> Marketing e Sistemas</p>
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Triunfo Automóveis</span>
+                                    <h4 class="text-white font-bold text-sm sm:text-base">03/2023 — 03/2024 </h4>
+                                    <p class="text-gray-400 text-xs sm:text-sm" data-i18n="about.experience2">Marketing e Sistemas</p>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded inline-block">Triunfo Automóveis</span>
                                 </div>
                             </div>
                             <!----Job 3---->
                             <div class="flex items-start">
-                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                                    <i data-feather="code" class="text-primary"></i>
+                                <div class="flex-shrink-0 h-8 sm:h-10 w-8 sm:w-10 rounded-full bg-primary/10 flex items-center justify-center mr-3 sm:mr-4">
+                                    <i data-feather="code" class="text-primary w-4 sm:w-5 h-4 sm:h-5"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-white font-bold">01/2022 — 02/2024</h4>
-                                    <p class="text-gray-400" data-i18n="about.experience"> Vendedor Externo</p>
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Guarda Mirim</span>
+                                    <h4 class="text-white font-bold text-sm sm:text-base">01/2022 — 02/2024</h4>
+                                    <p class="text-gray-400 text-xs sm:text-sm" data-i18n="about.experience3">Vendedor Externo</p>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded inline-block">Guarda Mirim</span>
                                 </div>
                             </div>
                             </div>
@@ -668,25 +911,25 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-darker">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white mb-4" data-i18n="contact.title">SYSTEM CONNECTION</h2>
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4" data-i18n="contact.title">SYSTEM CONNECTION</h2>
                 <div class="w-20 h-1 bg-primary mx-auto"></div>
             </div>
-            <div class="max-w-md mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <a href="mailto:dev.panzarini@gmail.com" class="contact-card bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 text-center">
+            <div class="max-w-2xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <a href="mailto:dev.panzarini@gmail.com" class="contact-card bg-dark p-6 sm:p-8 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 text-center">
                         <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                             <i data-feather="mail" class="text-primary"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2" data-i18n="contact.email.title">Email</h3>
-                        <p class="text-gray-400">dev.panzarini@gmail.com</p>
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-2" data-i18n="contact.email.title">Email</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 break-words">dev.panzarini@gmail.com</p>
                     </a>
-                    <a href="https://github.com/RyanPanzarini" target="_blank" class="contact-card bg-dark p-6 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 text-center">
+                    <a href="https://github.com/RyanPanzarini" target="_blank" class="contact-card bg-dark p-6 sm:p-8 rounded-lg border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 text-center">
                         <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                             <i data-feather="github" class="text-primary"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2" data-i18n="contact.github.title">GitHub</h3>
-                        <p class="text-gray-400">https://github.com/RyanPanzarini</p>
+                        <h3 class="text-base sm:text-lg font-bold text-white mb-2" data-i18n="contact.github.title">GitHub</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 break-words">github.com/RyanPanzarini</p>
                     </a>
                 </div>
             </div>
@@ -696,12 +939,12 @@
     <!-- Footer -->
     <footer class="bg-dark py-8 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <span class="text-primary font-mono text-xl font-bold" data-i18n="footer.social">Social</span>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <span class="text-primary font-mono text-lg sm:text-xl font-bold" data-i18n="footer.social">Social</span>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-primary transition-all duration-300">
+                    <a href="https://www.instagram.com/ryanpanzarini/" class="text-gray-400 hover:text-primary transition-all duration-300">
                         <i data-feather="instagram"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/ryan-panzarini-137521265/" class="text-gray-400 hover:text-primary transition-all duration-300">
@@ -712,7 +955,7 @@
                     </a>
                 </div>
             </div>
-            <div class="mt-8 text-center text-gray-500 text-sm">
+            <div class="mt-8 text-center text-gray-500 text-xs sm:text-sm">
                 <p data-i18n="footer.copyright">© 2026 Ryan Panzarini Paes. All systems operational.</p>
             </div>
         </div>
