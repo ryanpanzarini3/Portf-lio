@@ -1,5 +1,12 @@
 const translations = {
   pt: {
+    nav: {
+      home: 'Home',
+      skills: 'Skills',
+      projects: 'Projetos',
+      about: 'Sobre',
+      contact: 'Contato'
+    },
     hero: {
       software: 'SOFTWARE',
       engineer: 'ENGINEER',
@@ -15,7 +22,7 @@ const translations = {
         feature1: 'Design responsivo',
         feature2: 'SEO otimizado',
         feature3: 'Rápido e leve',
-        price: 'A partir de R$ 800'
+        price: 'A partir de R$ 200'
       },
       full: {
         title: 'Website Completo',
@@ -24,7 +31,7 @@ const translations = {
         feature2: 'Múltiplas páginas',
         feature3: 'Formulários funcionais',
         feature4: 'Blog integrado',
-        price: 'A partir de R$ 2.000'
+        price: 'A partir de R$ 500'
       },
       ecom: {
         title: 'E-commerce',
@@ -33,7 +40,7 @@ const translations = {
         feature2: 'Pagamento integrado',
         feature3: 'Gestão de produtos',
         feature4: 'Dashboard admin',
-        price: 'A partir de R$ 4.000'
+        price: 'A partir de R$ 1.250'
       },
       badge_popular: 'MAIS POPULAR',
       button_request: 'Orçamento',
@@ -75,7 +82,9 @@ const translations = {
       text: 'Sou Ryan Panzarini Paes, graduando do 6º semestre da Universidade Cesumar em Ponta Grossa/PR, com foco no desenvolvimento de software. Atualmente, atuo como analista de dados, aplicando e aprimorando minhas habilidades em projetos práticos. Além da graduação, concluí diversos cursos complementares em linguagens e tecnologias como Python e Node.js, o que reforça minha paixão por aprendizado contínuo e inovação. Meu objetivo é consolidar uma carreira de sucesso, contribuindo com soluções eficientes e criativas no mercado de tecnologia.',
       cv: 'Download CV',
       log: 'SYSTEM LOG',
-      experience: 'Estágio Análise de Dados'
+      experience1: 'Estágio Análise de Dados',
+      experience2: 'Marketing e Sistemas',
+      experience3: 'Vendedor Externo'
     },
     contact: {
       title: 'CONEXÃO DO SISTEMA',
@@ -86,9 +95,43 @@ const translations = {
         title: 'GitHub'
       }
     },
+    repositories: {
+      title: 'EXPLORE MY CODE',
+      subtitle: 'Acesse meu perfil no GitHub para visualizar todos os meus projetos, contribuições e aprender mais sobre meu trabalho como desenvolvedor.',
+      main_title: 'GitHub Profile',
+      main_desc: 'Confira todos os meus repositórios, projetos em andamento e contribuições open-source. Meu código está organizado e bem documentado para facilitar o entendimento e colaboração.',
+      visit_button: 'Visitar Perfil',
+      stats: {
+        repos: 'Repositórios Públicos',
+        commits: 'Commits',
+        languages: 'Linguagens'
+      },
+      cta_text: 'Quer colaborar ou viu algo interessante?',
+      cta_button: 'Entre em Contato'
+    },
     footer: {
       social: 'Social',
       copyright: '© 2026 Ryan Panzarini Paes. Todos os sistemas operacionais.'
+    },
+    languages: {
+      title: 'IDIOMAS',
+      subtitle: 'Conheça os idiomas que falo e meu nível de proficiência em cada um.',
+      portuguese: {
+        name: 'Português',
+        level: 'Nativo'
+      },
+      english: {
+        name: 'English',
+        level: 'Intermediário'
+      },
+      spanish: {
+        name: 'Español',
+        level: 'Básico'
+      },
+      italian: {
+        name: 'Italiano',
+        level: 'Básico'
+      }
     }
   },
   es: {
@@ -114,7 +157,7 @@ const translations = {
         feature1: 'Diseño responsivo',
         feature2: 'SEO optimizado',
         feature3: 'Rápido y ligero',
-        price: 'Desde $ 160'
+        price: 'Desde € 40'
       },
       full: {
         title: 'Sitio Web Completo',
@@ -123,7 +166,7 @@ const translations = {
         feature2: 'Múltiples páginas',
         feature3: 'Formularios funcionales',
         feature4: 'Blog integrado',
-        price: 'Desde $ 400'
+        price: 'Desde € 100'
       },
       ecom: {
         title: 'E-commerce',
@@ -132,7 +175,7 @@ const translations = {
         feature2: 'Pagos integrados',
         feature3: 'Gestión de productos',
         feature4: 'Panel de administración',
-        price: 'Desde $ 800'
+        price: 'Desde € 250'
       },
       badge_popular: 'MÁS POPULAR',
       button_request: 'Solicitar Presupuesto',
@@ -174,16 +217,52 @@ const translations = {
       text: 'Soy Ryan Panzarini Paes, estudiante del 6º semestre en la Universidad Cesumar en Ponta Grossa/PR, enfocado en desarrollo de software. Actualmente trabajo como analista de datos, aplicando y mejorando mis habilidades en proyectos prácticos.',
       cv: 'Descargar CV',
       log: 'SYSTEM LOG',
-      experience: 'Pasantía en Análisis de Datos'
+      experience1: 'Pasantía en Análisis de Datos',
+      experience2: 'Marketing y Sistemas',
+      experience3: 'Vendedor Externo'
     },
     contact: {
       title: 'CONECTAR',
       email: { title: 'Correo' },
       github: { title: 'GitHub' }
     },
+    repositories: {
+      title: 'EXPLORA MI CÓDIGO',
+      subtitle: 'Consulta mi perfil de GitHub para ver todos mis proyectos, contribuciones y saber más sobre mi trabajo como desarrollador.',
+      main_title: 'Perfil de GitHub',
+      main_desc: 'Consulta todos mis repositorios, proyectos en curso y contribuciones de código abierto. Mi código está organizado y bien documentado para facilitar la comprensión y colaboración.',
+      visit_button: 'Visitar Perfil',
+      stats: {
+        repos: 'Repositorios Públicos',
+        commits: 'Commits',
+        languages: 'Lenguajes'
+      },
+      cta_text: '¿Quieres colaborar o viste algo interesante?',
+      cta_button: 'Contactame'
+    },
     footer: {
       social: 'Social',
       copyright: '© 2026 Ryan Panzarini Paes. Todos los sistemas operativos.'
+    },
+    languages: {
+      title: 'IDIOMAS',
+      subtitle: 'Conoce los idiomas que hablo y mi nivel de competencia en cada uno.',
+      portuguese: {
+        name: 'Português',
+        level: 'Nativo'
+      },
+      english: {
+        name: 'English',
+        level: 'Intermedio'
+      },
+      spanish: {
+        name: 'Español',
+        level: 'Básico'
+      },
+      italian: {
+        name: 'Italiano',
+        level: 'Básico'
+      }
     }
   },
   en: {
@@ -209,7 +288,7 @@ const translations = {
         feature1: 'Responsive design',
         feature2: 'SEO optimized',
         feature3: 'Fast and lightweight',
-        price: 'From $ 160'
+        price: 'From $ 40'
       },
       full: {
         title: 'Full Website',
@@ -218,7 +297,7 @@ const translations = {
         feature2: 'Multiple pages',
         feature3: 'Functional forms',
         feature4: 'Integrated blog',
-        price: 'From $ 400'
+        price: 'From $ 100'
       },
       ecom: {
         title: 'E-commerce',
@@ -227,7 +306,7 @@ const translations = {
         feature2: 'Integrated payments',
         feature3: 'Product management',
         feature4: 'Admin dashboard',
-        price: 'From $ 800'
+        price: 'From $ 250'
       },
       badge_popular: 'MOST POPULAR',
       button_request: 'Request Quote',
@@ -269,7 +348,9 @@ const translations = {
       text: 'I am Ryan Panzarini Paes, a 6th semester student at Cesumar University in Ponta Grossa/PR, focused on software development. Currently, I work as a data analyst, applying and improving my skills in practical projects. In addition to my degree, I have completed several complementary courses in languages and technologies such as Python and Node.js, which reinforces my passion for continuous learning and innovation. My goal is to build a successful career, contributing with efficient and creative solutions in the technology market.',
       cv: 'Download CV',
       log: 'SYSTEM LOG',
-      experience: 'Data Analysis Internship'
+      experience1: 'Data Analysis Internship',
+      experience2: 'Marketing and Systems',
+      experience3: 'External Sales'
     },
     contact: {
       title: 'SYSTEM CONNECTION',
@@ -280,9 +361,43 @@ const translations = {
         title: 'GitHub'
       }
     },
+    repositories: {
+      title: 'EXPLORE MY CODE',
+      subtitle: 'Check out my GitHub profile to view all my projects, contributions and learn more about my work as a developer.',
+      main_title: 'GitHub Profile',
+      main_desc: 'Check out all my repositories, ongoing projects and open-source contributions. My code is organized and well documented to facilitate understanding and collaboration.',
+      visit_button: 'Visit Profile',
+      stats: {
+        repos: 'Public Repositories',
+        commits: 'Commits',
+        languages: 'Languages'
+      },
+      cta_text: 'Want to collaborate or seen something interesting?',
+      cta_button: 'Get In Touch'
+    },
     footer: {
       social: 'Social',
       copyright: '© 2026 Ryan Panzarini Paes. All systems operational.'
+    },
+    languages: {
+      title: 'LANGUAGES',
+      subtitle: 'Meet the languages I speak and my proficiency level in each one.',
+      portuguese: {
+        name: 'Português',
+        level: 'Native'
+      },
+      english: {
+        name: 'English',
+        level: 'Intermediate'
+      },
+      spanish: {
+        name: 'Español',
+        level: 'Basic'
+      },
+      italian: {
+        name: 'Italiano',
+        level: 'Basic'
+      }
     }
   },
   it: {
@@ -308,7 +423,7 @@ const translations = {
         feature1: 'Design responsive',
         feature2: 'SEO ottimizzato',
         feature3: 'Veloce e leggero',
-        price: 'Da $ 160'
+        price: 'Da € 40'
       },
       full: {
         title: 'Sito Completo',
@@ -317,7 +432,7 @@ const translations = {
         feature2: 'Pagine multiple',
         feature3: 'Form funzionanti',
         feature4: 'Blog integrato',
-        price: 'Da $ 400'
+        price: 'Da € 100'
       },
       ecom: {
         title: 'E-commerce',
@@ -326,7 +441,7 @@ const translations = {
         feature2: 'Pagamenti integrati',
         feature3: 'Gestione prodotti',
         feature4: 'Pannello admin',
-        price: 'Da $ 800'
+        price: 'Da € 250'
       },
       badge_popular: 'PIÙ POPOLARE',
       button_request: 'Richiedi Preventivo',
@@ -368,7 +483,9 @@ const translations = {
       text: 'Sono Ryan Panzarini Paes, studente del 6º semestre presso l\'Università Cesumar a Ponta Grossa/PR, focalizzato sullo sviluppo software. Attualmente lavoro come analista dati, applicando e migliorando le mie competenze in progetti pratici. Oltre alla laurea, ho completato diversi corsi complementari in linguaggi e tecnologie come Python e Node.js, il che rafforza la mia passione per l\'apprendimento continuo e l\'innovazione. Il mio obiettivo è costruire una carriera di successo, contribuendo con soluzioni efficienti e creative nel mercato tecnologico.',
       cv: 'Scarica CV',
       log: 'SYSTEM LOG',
-      experience: 'Tirocinio Analisi Dati'
+      experience1: 'Tirocinio Analisi Dati',
+      experience2: 'Marketing e Sistemi',
+      experience3: 'Venditore Esterno'
     },
     contact: {
       title: 'CONNESSIONE DI SISTEMA',
@@ -379,9 +496,43 @@ const translations = {
         title: 'GitHub'
       }
     },
+    repositories: {
+      title: 'ESPLORA IL MIO CODICE',
+      subtitle: 'Visita il mio profilo GitHub per visualizzare tutti i miei progetti, contributi e saperne di più sul mio lavoro come sviluppatore.',
+      main_title: 'Profilo GitHub',
+      main_desc: 'Controlla tutti i miei repository, i progetti in corso e i contributi open-source. Il mio codice è organizzato e ben documentato per facilitare la comprensione e la collaborazione.',
+      visit_button: 'Visita Profilo',
+      stats: {
+        repos: 'Repository Pubblici',
+        commits: 'Commit',
+        languages: 'Linguaggi'
+      },
+      cta_text: 'Vuoi collaborare o hai visto qualcosa di interessante?',
+      cta_button: 'Contattami'
+    },
     footer: {
       social: 'Social',
       copyright: '© 2026 Ryan Panzarini Paes. Tutti i sistemi operativi.'
+    },
+    languages: {
+      title: 'LINGUE',
+      subtitle: 'Conosci le lingue che parlo e il mio livello di competenza in ognuna.',
+      portuguese: {
+        name: 'Português',
+        level: 'Nativo'
+      },
+      english: {
+        name: 'English',
+        level: 'Intermedio'
+      },
+      spanish: {
+        name: 'Español',
+        level: 'Base'
+      },
+      italian: {
+        name: 'Italiano',
+        level: 'Base'
+      }
     }
   }
 };
@@ -414,6 +565,11 @@ function updatePageText() {
 
     element.textContent = text || '';
   });
+  
+  // Re-render feather icons after translation update
+  if (typeof feather !== 'undefined') {
+    feather.replace();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
