@@ -252,12 +252,12 @@
             
             <div class="space-y-20">
                 <!-- Project 1: IncluiPG -->
-                <div class="reveal-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div class="order-2 lg:order-1">
+                <div class="reveal-item grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div class="order-2 lg:order-1 flex flex-col justify-center">
                         <!-- Project Info -->
-                        <div>
-                            <h3 class="text-3xl font-bold text-white mb-4" data-i18n="projects.includipg.title">IncluiPG</h3>
-                            <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="projects.includipg.desc">Sistema em desenvolvimento com a proposta de aumentar a inclusão e acessibilidade na cidade de Ponta Grossa.</p>
+                        <div class="w-full">
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4" data-i18n="projects.includipg.title">IncluiPG</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-6 leading-relaxed" data-i18n="projects.includipg.desc">Sistema em desenvolvimento com a proposta de aumentar a inclusão e acessibilidade na cidade de Ponta Grossa.</p>
                             
                             <div class="flex flex-wrap gap-2 mb-8">
                                 <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">HTML</span>
@@ -265,56 +265,47 @@
                                 <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">TailwindCSS</span>
                             </div>
                             
-                            <div class="flex space-x-6">
-                                <a href="https://ryanpanzarini.github.io/IncluiPG1/" class="inline-flex items-center px-6 py-3 border border-primary text-primary font-mono rounded-md hover:bg-primary/10 transition-all duration-300">
+                            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                                <a href="https://ryanpanzarini.github.io/IncluiPG1/" class="inline-flex items-center justify-center sm:justify-start px-4 sm:px-6 py-2 sm:py-3 border border-primary text-primary font-mono text-sm sm:text-base rounded-md hover:bg-primary/10 transition-all duration-300">
                                     <i data-feather="external-link" class="w-4 h-4 mr-2"></i> <span data-i18n="common.live">Live Demo</span>
                                 </a>
-                                <a href="https://github.com/RyanPanzarini/IncluiPG1" class="inline-flex items-center px-6 py-3 border border-gray-700 text-gray-400 font-mono rounded-md hover:border-primary/50 hover:text-white transition-all duration-300">
+                                <a href="https://github.com/RyanPanzarini/IncluiPG1" class="inline-flex items-center justify-center sm:justify-start px-4 sm:px-6 py-2 sm:py-3 border border-gray-700 text-gray-400 font-mono text-sm sm:text-base rounded-md hover:border-primary/50 hover:text-white transition-all duration-300">
                                     <i data-feather="github" class="w-4 h-4 mr-2"></i> <span data-i18n="common.source">GitHub</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="order-1 lg:order-2 flex justify-center w-full">
                         <!-- Mockup Devices -->
-                        <div class="relative h-96">
+                        <div class="relative w-full max-w-xs mx-auto" style="height: auto; min-height: 300px;">
                             <!-- Mac Mockup -->
-                            <div class="absolute -right-8 top-0 device-mockup-desktop">
-                                <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border-8 border-gray-900" style="width: 340px;">
-                                    <!-- Mac Top Bar -->
-                                    <div class="bg-gray-700 px-4 py-2 flex items-center justify-between h-7">
-                                        <div class="flex items-center gap-1.5">
-                                            <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
-                                            <div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
-                                            <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                            <div class="hidden sm:block relative w-full">
+                                <div class="bg-gray-800 rounded-lg sm:rounded-2xl shadow-2xl overflow-hidden border-4 sm:border-8 border-gray-900" style="max-width: 280px;">
+                                    <div class="bg-gray-700 px-3 sm:px-4 py-1 sm:py-2 flex items-center justify-between h-6 sm:h-7">
+                                        <div class="flex items-center gap-1">
+                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-red-500"></div>
+                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-yellow-500"></div>
+                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-green-500"></div>
                                         </div>
                                         <span class="text-xs text-gray-400 font-semibold">Project</span>
-                                        <div class="w-6"></div>
+                                        <div class="w-4"></div>
                                     </div>
-                                    <!-- Content -->
-                                    <div class="overflow-hidden" style="height: 200px;">
+                                    <div class="overflow-hidden" style="height: 150px;">
                                         <img src="imagens/IncluiPgDesktop.jpeg" alt="IncluiPG Mac" class="w-full h-full object-cover">
                                     </div>
-                                </div>
-                                <!-- Mac Stand -->
-                                <div class="flex justify-center -mt-2">
-                                    <div class="bg-gray-800 rounded-t-2xl" style="width: 60%; height: 16px;"></div>
                                 </div>
                             </div>
                             
                             <!-- iPhone Mockup -->
-                            <div class="absolute left-0 bottom-0 device-mockup-mobile">
-                                <div class="bg-black rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-900" style="width: 150px; height: 300px;">
-                                    <!-- iPhone Notch -->
+                            <div class="w-full flex justify-center">
+                                <div class="bg-black rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-900" style="width: 140px; height: 280px;">
                                     <div class="relative bg-black">
                                         <div class="bg-black rounded-b-2xl mx-auto" style="width: 100px; height: 24px;"></div>
                                     </div>
-                                    <!-- Content -->
-                                    <div class="w-full bg-white overflow-hidden" style="height: 250px;">
+                                    <div class="w-full bg-white overflow-hidden" style="height: 220px;">
                                         <img src="imagens/IncluiPgMobile.jpeg" alt="IncluiPG iPhone" class="w-full h-full object-cover">
                                     </div>
-                                    <!-- iPhone Home Indicator -->
                                     <div class="bg-black px-4 py-1.5 flex justify-center">
                                         <div class="bg-gray-700 rounded-full" style="width: 80%; height: 4px;"></div>
                                     </div>
@@ -325,61 +316,10 @@
                 </div>
                 
                 <!-- Project 2: Fire House Club -->
-                <div class="reveal-item grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 items-center">
-                    <div class="flex justify-center order-2 lg:order-1">
-                        <!-- Mockup Devices -->
-                        <div class="relative h-64 sm:h-80 md:h-96 w-full max-w-sm">
-                            <!-- Mac Mockup -->
-                            <div class="absolute left-0 sm:left-0 lg:-left-8 top-0 device-mockup-desktop w-full">
-                                <div class="bg-gray-800 rounded-lg sm:rounded-2xl shadow-2xl overflow-hidden border-4 sm:border-8 border-gray-900 w-full" style="max-width: 340px; margin: 0 auto;">
-                                    <!-- Mac Top Bar -->
-                                    <div class="bg-gray-700 px-3 sm:px-4 py-1 sm:py-2 flex items-center justify-between h-6 sm:h-7">
-                                        <div class="flex items-center gap-1">
-                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-red-500"></div>
-                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-yellow-500"></div>
-                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-green-500"></div>
-                                        </div>
-                                        <span class="text-xs text-gray-400 font-semibold">Project</span>
-                                        <div class="w-4 sm:w-6"></div>
-                                    </div>
-                                    <!-- Content -->
-                                    <div class="overflow-hidden" style="height: 120px;">
-                                        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
-                                            <source src="videos/VideoFireHouse.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
-                                </div>
-                                <!-- Mac Stand -->
-                                <div class="flex justify-center -mt-2">
-                                    <div class="bg-gray-800 rounded-t-2xl" style="width: 60%; height: 16px;"></div>
-                                </div>
-                            </div>
-                            
-                            <!-- iPhone Mockup -->
-                            <div class="absolute right-0 bottom-0 device-mockup-mobile">
-                                <div class="bg-black rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-900" style="width: 150px; height: 300px;">
-                                    <!-- iPhone Notch -->
-                                    <div class="relative bg-black">
-                                        <div class="bg-black rounded-b-2xl mx-auto" style="width: 100px; height: 24px;"></div>
-                                    </div>
-                                    <!-- Content -->
-                                    <div class="w-full bg-white overflow-hidden" style="height: 250px;">
-                                        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
-                                            <source src="videos/VideoFireHouseMobile.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
-                                    <!-- iPhone Home Indicator -->
-                                    <div class="bg-black px-4 py-1.5 flex justify-center">
-                                        <div class="bg-gray-700 rounded-full" style="width: 80%; height: 4px;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="order-1 lg:order-2">
+                <div class="reveal-item grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div class="order-2 lg:order-1 flex flex-col justify-center">
                         <!-- Project Info -->
-                        <div>
+                        <div class="w-full">
                             <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4" data-i18n="projects.firehouse.title">Fire House Club</h3>
                             <p class="text-sm sm:text-base text-gray-400 mb-6 leading-relaxed" data-i18n="projects.firehouse.desc">Single-page front-end application desenvolvida com HTML5 semântico, CSS3 responsivo e JavaScript Vanilla. Implementa componentes interativos client-side, integração com plataformas externas e estrutura otimizada para performance.</p>
                             
@@ -389,7 +329,7 @@
                                 <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">JavaScript</span>
                             </div>
                             
-                            <div class="flex flex-col sm:flex-row gap-3 sm:gap-6">
+                            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
                                 <a href="https://www.firehouseclub.com.br" class="inline-flex items-center justify-center sm:justify-start px-4 sm:px-6 py-2 sm:py-3 border border-primary text-primary font-mono text-sm sm:text-base rounded-md hover:bg-primary/10 transition-all duration-300">
                                     <i data-feather="external-link" class="w-4 h-4 mr-2"></i> <span data-i18n="common.live">Live Demo</span>
                                 </a>
@@ -399,15 +339,57 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="order-1 lg:order-2 flex justify-center w-full">
+                        <!-- Mockup Devices -->
+                        <div class="relative w-full max-w-xs mx-auto" style="height: auto; min-height: 280px;">
+                            <!-- Mac Mockup -->
+                            <div class="hidden sm:block relative w-full">
+                                <div class="bg-gray-800 rounded-lg sm:rounded-2xl shadow-2xl overflow-hidden border-4 sm:border-8 border-gray-900" style="max-width: 280px;">
+                                    <div class="bg-gray-700 px-3 sm:px-4 py-1 sm:py-2 flex items-center justify-between h-6 sm:h-7">
+                                        <div class="flex items-center gap-1">
+                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-red-500"></div>
+                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-yellow-500"></div>
+                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-green-500"></div>
+                                        </div>
+                                        <span class="text-xs text-gray-400 font-semibold">Project</span>
+                                        <div class="w-4"></div>
+                                    </div>
+                                    <div class="overflow-hidden" style="height: 120px;">
+                                        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+                                            <source src="videos/VideoFireHouse.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- iPhone Mockup -->
+                            <div class="w-full flex justify-center">
+                                <div class="bg-black rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-900" style="width: 140px; height: 280px;">
+                                    <div class="relative bg-black">
+                                        <div class="bg-black rounded-b-2xl mx-auto" style="width: 100px; height: 24px;"></div>
+                                    </div>
+                                    <div class="w-full bg-white overflow-hidden" style="height: 220px;">
+                                        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+                                            <source src="videos/VideoFireHouseMobile.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="bg-black px-4 py-1.5 flex justify-center">
+                                        <div class="bg-gray-700 rounded-full" style="width: 80%; height: 4px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Project 3: Cafeteria Panzarini -->
-                <div class="reveal-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div class="order-2 lg:order-1">
+                <div class="reveal-item grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div class="order-2 lg:order-1 flex flex-col justify-center">
                         <!-- Project Info -->
-                        <div>
-                            <h3 class="text-3xl font-bold text-white mb-4" data-i18n="projects.cafeteria.title">Cafeteria Panzarini</h3>
-                            <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="projects.cafeteria.desc">Desenvolvido com HTML, TailwindCSS e JavaScript. O site apresenta o cardápio completo de cafés e lanches com um design acolhedor e responsivo. Integração direta ao WhatsApp para pedidos e encomendas.</p>
+                        <div class="w-full">
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4" data-i18n="projects.cafeteria.title">Cafeteria Panzarini</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-6 leading-relaxed" data-i18n="projects.cafeteria.desc">Desenvolvido com HTML, TailwindCSS e JavaScript. O site apresenta o cardápio completo de cafés e lanches com um design acolhedor e responsivo. Integração direta ao WhatsApp para pedidos e encomendas.</p>
                             
                             <div class="flex flex-wrap gap-2 mb-8">
                                 <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">HTML</span>
@@ -415,56 +397,47 @@
                                 <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">JavaScript</span>
                             </div>
                             
-                            <div class="flex space-x-6">
-                                <a href="https://ryanpanzarini.github.io/Projeto-Cafeteria/" class="inline-flex items-center px-6 py-3 border border-primary text-primary font-mono rounded-md hover:bg-primary/10 transition-all duration-300">
+                            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                                <a href="https://ryanpanzarini.github.io/Projeto-Cafeteria/" class="inline-flex items-center justify-center sm:justify-start px-4 sm:px-6 py-2 sm:py-3 border border-primary text-primary font-mono text-sm sm:text-base rounded-md hover:bg-primary/10 transition-all duration-300">
                                     <i data-feather="external-link" class="w-4 h-4 mr-2"></i> <span data-i18n="common.live">Live Demo</span>
                                 </a>
-                                <a href="https://github.com/RyanPanzarini/Projeto-Cafeteria" class="inline-flex items-center px-6 py-3 border border-gray-700 text-gray-400 font-mono rounded-md hover:border-primary/50 hover:text-white transition-all duration-300">
+                                <a href="https://github.com/RyanPanzarini/Projeto-Cafeteria" class="inline-flex items-center justify-center sm:justify-start px-4 sm:px-6 py-2 sm:py-3 border border-gray-700 text-gray-400 font-mono text-sm sm:text-base rounded-md hover:border-primary/50 hover:text-white transition-all duration-300">
                                     <i data-feather="github" class="w-4 h-4 mr-2"></i> <span data-i18n="common.source">GitHub</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="order-1 lg:order-2 flex justify-center w-full">
                         <!-- Mockup Devices -->
-                        <div class="relative h-96">
+                        <div class="relative w-full max-w-xs mx-auto" style="height: auto; min-height: 300px;">
                             <!-- Mac Mockup -->
-                            <div class="absolute -right-8 top-0 device-mockup-desktop">
-                                <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border-8 border-gray-900" style="width: 340px;">
-                                    <!-- Mac Top Bar -->
-                                    <div class="bg-gray-700 px-4 py-2 flex items-center justify-between h-7">
-                                        <div class="flex items-center gap-1.5">
-                                            <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
-                                            <div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
-                                            <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                            <div class="hidden sm:block relative w-full">
+                                <div class="bg-gray-800 rounded-lg sm:rounded-2xl shadow-2xl overflow-hidden border-4 sm:border-8 border-gray-900" style="max-width: 280px;">
+                                    <div class="bg-gray-700 px-3 sm:px-4 py-1 sm:py-2 flex items-center justify-between h-6 sm:h-7">
+                                        <div class="flex items-center gap-1">
+                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-red-500"></div>
+                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-yellow-500"></div>
+                                            <div class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-green-500"></div>
                                         </div>
                                         <span class="text-xs text-gray-400 font-semibold">Project</span>
-                                        <div class="w-6"></div>
+                                        <div class="w-4"></div>
                                     </div>
-                                    <!-- Content -->
-                                    <div class="overflow-hidden" style="height: 200px;">
+                                    <div class="overflow-hidden" style="height: 150px;">
                                         <img src="imagens/CafeteriaDesktop.jpeg" alt="Cafeteria Mac" class="w-full h-full object-cover">
                                     </div>
-                                </div>
-                                <!-- Mac Stand -->
-                                <div class="flex justify-center -mt-2">
-                                    <div class="bg-gray-800 rounded-t-2xl" style="width: 60%; height: 16px;"></div>
                                 </div>
                             </div>
                             
                             <!-- iPhone Mockup -->
-                            <div class="absolute left-0 bottom-0 device-mockup-mobile">
-                                <div class="bg-black rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-900" style="width: 150px; height: 300px;">
-                                    <!-- iPhone Notch -->
+                            <div class="w-full flex justify-center">
+                                <div class="bg-black rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-900" style="width: 140px; height: 280px;">
                                     <div class="relative bg-black">
                                         <div class="bg-black rounded-b-2xl mx-auto" style="width: 100px; height: 24px;"></div>
                                     </div>
-                                    <!-- Content -->
-                                    <div class="w-full bg-white overflow-hidden" style="height: 250px;">
+                                    <div class="w-full bg-white overflow-hidden" style="height: 220px;">
                                         <img src="imagens/CafeteriaMobile.jpeg" alt="Cafeteria iPhone" class="w-full h-full object-cover">
                                     </div>
-                                    <!-- iPhone Home Indicator -->
                                     <div class="bg-black px-4 py-1.5 flex justify-center">
                                         <div class="bg-gray-700 rounded-full" style="width: 80%; height: 4px;"></div>
                                     </div>
