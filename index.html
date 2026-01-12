@@ -46,6 +46,7 @@
                         <a href="#skills" class="nav-link text-gray-200 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.skills">Skills</a>
                         <a href="#projects" class="nav-link text-gray-200 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.projects">Projects</a>
                         <a href="#about" class="nav-link text-gray-200 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.about">About</a>
+                        <a href="#sql" class="nav-link text-gray-200 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.sql">SQL</a>
                         <a href="#contact" class="nav-link text-gray-200 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all duration-300" data-i18n="nav.contact">Contact</a>
                         <div class="flex items-center gap-3">
                             <select id="language-selector" class="bg-dark border border-gray-700 text-gray-200 px-3 py-2 rounded-md text-sm font-medium hover:border-primary transition-all duration-300 cursor-pointer">
@@ -70,15 +71,69 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center bg-fixed" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><defs><style>.code{font-family:monospace;font-size:14px;fill:%23088cff;opacity:0.1;animation:float 8s infinite ease-in-out;}.floating{animation:float 8s infinite ease-in-out;}</style><script type=%22text/javascript%22><![CDATA[]]></script></defs><text x=%2250%22 y=%2250%22 class=%22code%22>&lt;div class=%27code%27&gt;</text><text x=%22100%22 y=%2150%22 class=%22code%22>const developer = true;</text><text x=%22200%22 y=%22250%22 class=%22code%22>function deploy() {}</text><text x=%2250%22 y=%22350%22 class=%22code%22>&lt;/div&gt;</text><circle cx=%22600%22 cy=%22400%22 r=%22150%22 fill=%22none%22 stroke=%22%23088cff%22 opacity=%220.2%22/><circle cx=%22600%22 cy=%22400%22 r=%22200%22 fill=%22none%22 stroke=%22%2300d4ff%22 opacity=%220.1%22/></svg>');">
-        <div class="absolute inset-0 bg-grid-dark opacity-20"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-dark/60 to-darker/95"></div>
-        <!-- Animated Background Elements -->
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute top-20 left-10 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" style="background-color: #0ea5e9;"></div>
-            <div class="absolute top-40 right-10 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" style="background-color: #06b6d4;"></div>
-            <div class="absolute -bottom-8 left-20 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000" style="background-color: #0ea5e9;"></div>
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-darker">
+        <!-- Animated Programming Background -->
+        <div class="absolute inset-0">
+            <!-- Grid Background -->
+            <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(to right, rgba(14, 165, 233, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(14, 165, 233, 0.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+            
+            <!-- Animated Code Elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <!-- Floating code snippets -->
+                <div class="absolute top-10 left-5 text-cyan-400/30 font-mono text-xs sm:text-sm" style="animation: float 6s ease-in-out infinite; animation-delay: 0s;">
+                    <div>&lt;div class="code"&gt;</div>
+                    <div>const developer = true;</div>
+                </div>
+                <div class="absolute top-20 right-8 text-teal-400/30 font-mono text-xs sm:text-sm" style="animation: float 6s ease-in-out infinite; animation-delay: 1s;">
+                    <div>function deploy() {</div>
+                    <div>&nbsp;&nbsp;return "success";</div>
+                    <div>}</div>
+                </div>
+                <div class="absolute bottom-20 left-10 text-cyan-400/25 font-mono text-xs sm:text-sm" style="animation: float 6s ease-in-out infinite; animation-delay: 2s;">
+                    <div>console.log('Ready!');</div>
+                    <div>npm run dev</div>
+                </div>
+                <div class="absolute top-1/3 right-5 text-teal-400/25 font-mono text-xs sm:text-sm" style="animation: float 6s ease-in-out infinite; animation-delay: 1.5s;">
+                    <div>&lt;Component /&gt;</div>
+                    <div>export default App;</div>
+                </div>
+                
+                <!-- Floating symbols -->
+                <div class="absolute top-1/4 left-1/4 text-cyan-400/20 text-4xl sm:text-6xl" style="animation: floatSlow 10s ease-in-out infinite; animation-delay: 0s;">&lt;&gt;</div>
+                <div class="absolute top-2/3 right-1/4 text-teal-400/20 text-3xl sm:text-5xl" style="animation: floatSlow 10s ease-in-out infinite; animation-delay: 2s;">{ }</div>
+                <div class="absolute bottom-1/4 left-1/3 text-cyan-400/20 text-3xl sm:text-5xl" style="animation: floatSlow 10s ease-in-out infinite; animation-delay: 4s;">[ ]</div>
+                <div class="absolute top-1/2 right-10 text-teal-400/20 text-4xl sm:text-6xl" style="animation: floatSlow 10s ease-in-out infinite; animation-delay: 1s;">;</div>
+                
+                <!-- Animated circles -->
+                <div class="absolute top-1/3 left-1/3 w-64 h-64 rounded-full mix-blend-multiply filter blur-3xl opacity-20" style="background-color: #0ea5e9; animation: blob 7s infinite;">
+                </div>
+                <div class="absolute top-1/2 right-1/4 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-20" style="background-color: #06b6d4; animation: blob 7s infinite; animation-delay: 2s;">
+                </div>
+                <div class="absolute -bottom-8 left-20 w-80 h-80 rounded-full mix-blend-multiply filter blur-3xl opacity-15" style="background-color: #0ea5e9; animation: blob 7s infinite; animation-delay: 4s;">
+                </div>
+                
+                <!-- Animated lines/connectors -->
+                <svg class="absolute inset-0 w-full h-full opacity-20" preserveAspectRatio="none" style="top: 0; left: 0;">
+                    <defs>
+                        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.6" />
+                            <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.2" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 0,200 Q 300,100 600,200 T 1200,200" fill="none" stroke="url(#lineGradient)" stroke-width="2" style="animation: pathAnimation 20s linear infinite;">
+                    </path>
+                    <path d="M 0,400 Q 400,300 800,400 T 1200,400" fill="none" stroke="url(#lineGradient)" stroke-width="2" style="animation: pathAnimation 20s linear infinite; animation-delay: 5s;">
+                    </path>
+                    <path d="M 0,600 Q 300,500 600,600 T 1200,600" fill="none" stroke="url(#lineGradient)" stroke-width="2" style="animation: pathAnimation 20s linear infinite; animation-delay: 10s;">
+                    </path>
+                </svg>
+            </div>
+            
+            <!-- Gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-dark/40 via-transparent to-darker/95"></div>
         </div>
+        
+        <!-- Content -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-fade-in">
                 <span id="typing-text" class="text-primary font-mono text-3xl sm:text-4xl md:text-6xl lg:text-7xl"></span><span id="typing-cursor" class="typing-cursor">▍</span>
@@ -307,7 +362,7 @@
                     <div class="drawer-content hidden overflow-hidden transition-all duration-300" id="about-content" style="max-height: 0;">
                         <div class="p-6 bg-dark/50 border border-gray-700/50 border-t-0 rounded-b-2xl space-y-4">
                             <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about.description">
-                                Sou Ryan Panzarini Paes, graduando do 6º semestre da Universidade Cesumar com foco em desenvolvimento de software. Atualmente trabalho como analista de dados, aplicando habilidades em projetos práticos.
+                                Sou Ryan Panzarini Paes, graduando do 6º semestre da Universidade Cesumar em Ponta Grossa/PR, com foco no desenvolvimento de software. Atualmente, atuo como analista de dados, aplicando e aprimorando minhas habilidades em projetos práticos. Além da graduação, concluí diversos cursos complementares em linguagens e tecnologias como Python e Node.js, o que reforça minha paixão por aprendizado contínuo e inovação. Meu objetivo é consolidar uma carreira de sucesso, contribuindo com soluções eficientes e criativas no mercado de tecnologia.
                             </p>
                             <div class="space-y-3">
                                 <div class="flex items-start gap-3 p-3 rounded-lg bg-darker/50 border border-gray-700/30">
@@ -941,7 +996,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-darker relative overflow-hidden">
+    <section id="services" class="py-20 bg-dark relative overflow-hidden">
         <!-- Background decorative elements -->
         <div class="absolute inset-0 bg-grid-dark opacity-20"></div>
         <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
@@ -1089,7 +1144,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 sm:py-20 bg-dark">
+    <section id="about" class="py-20 bg-darker relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
                 <div>
@@ -1142,6 +1197,167 @@
                             </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SQL Queries Section -->
+    <section id="sql" class="py-16 sm:py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4" data-i18n="sql.title">SQL QUERIES</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto" data-i18n="sql.subtitle">Exemplos de consultas SQL demonstrando minhas habilidades em manipulação e análise de dados.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
+                <!-- Tasy Queries -->
+                <div class="bg-darker p-4 sm:p-6 rounded-lg border border-gray-800 hover:border-primary/30 transition-all duration-300">
+                    <button class="drawer-toggle w-full text-left flex items-center justify-between py-2" data-drawer="sql-tasy">
+                        <h3 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                            <i data-feather="database" class="w-5 h-5 text-primary"></i>
+                            <span data-i18n="sql.tasy.title">Consultas em Tasy</span>
+                        </h3>
+                        <i data-feather="chevron-down" class="drawer-icon w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div id="sql-tasy-content" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-4">
+                        <pre class="bg-dark/50 p-3 sm:p-4 rounded text-xs sm:text-sm text-gray-300 overflow-x-auto border border-gray-700"><code>-- APS - Atendimento por Tipo de Evolução
+-- APS - Atendimento por Tipo de Evolução 
+select DT_EVOLUCAO Data_Evolucao,
+obter_nome_pf(CD_PESSOA_FISICA) 
+Paciente,    
+SUBSTR(obter_nome_pessoa_fisica(cd_medico,''),1,60) Profissional,
+SUBSTR(obter_valor_dominio(72, ie_tipo_evolucao),1,60) ds_evolucao,
+obter_nome_estabelecimento(obter_estab_atend(NR_ATENDIMENTO))Estabelecimento,        
+substr(obter_desc_tipo_evolucao(ie_evolucao_clinica),1,80) Tipo_de_Evolucao
+from 
+EVOLUCAO_PACIENTE--
+where ((ie_evolucao_clinica  =:ie_tipo_evolucao) or ('0' =  :ie_tipo_evolucao))--
+and dt_evolucao between inicio_dia(:dt_inicial) and fim_dia(:dt_final) --and  ((cd_medico     = :cd_medico) or ('0' = :cd_medico))--
+and (obter_estab_atend(nr_atendimento) = :estabelecimento or (:estabelecimento = '0'))</code></pre>
+                    </div>
+                </div>
+
+                <!-- Optimizations -->
+                <div class="bg-darker p-4 sm:p-6 rounded-lg border border-gray-800 hover:border-primary/30 transition-all duration-300">
+                    <button class="drawer-toggle w-full text-left flex items-center justify-between py-2" data-drawer="sql-otimizacao">
+                        <h3 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                            <i data-feather="zap" class="w-5 h-5 text-primary"></i>
+                            <span data-i18n="sql.optimization.title">Otimizações</span>
+                        </h3>
+                        <i data-feather="chevron-down" class="drawer-icon w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div id="sql-otimizacao-content" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-4">
+                        <pre class="bg-dark/50 p-3 sm:p-4 rounded text-xs sm:text-sm text-gray-300 overflow-x-auto border border-gray-700"><code>-- Relatório Operacional Territorial Analítico
+-- Relatório Operacional Territorial Analítico 
+select substr(sus_obter_dados_equipe(b.NR_SEQ_SUS_EQUIPE,'NM'),1,100)equipe,
+obter_cpf_pessoa_fisica(a.CD_PESSOA_FIS_RESPON)cpf_resp,
+obter_cns(a.CD_PESSOA_FIS_RESPON)cns_resp,
+a.CD_PESSOA_FIS_RESPON cod_pessoa,
+obter_nome_pf(a.CD_PESSOA_FIS_RESPON)pessoa_resp,
+to_char(obter_data_nascto_pf(a.CD_PESSOA_FIS_RESPON),'dd/mm/yyyy')nasc_resp,
+obter_sexo_pf(a.CD_PESSOA_FIS_RESPON,'C')sexo_resp,
+
+obter_cpf_pessoa_fisica(b.CD_PESSOA_FISICA)cpf_dep,
+obter_cns(b.cd_pessoa_fisica)cns,
+obter_nome_pf(b.CD_PESSOA_FISICA)pessoa_dep,
+c.ds_logradouro casa,
+to_char(obter_data_nascto_pf(b.CD_PESSOA_FISICA),'dd/mm/yyyy')nasc_dep,
+obter_sexo_pf(b.CD_PESSOA_FISICA,'C')sexo_dep,
+substr(obter_desc_micro_area(b.NR_SEQ_MICRO_AREA),1,255) microarea,
+obter_nome_estabelecimento(b.cd_estabelecimento)estabelecimento
+
+from ESUS_CAD_DOM_FAMILIA a,
+ESUS_CAD_INDIVIDUAL b,
+ESUS_CAD_DOMICILIAR c
+
+where  a.cd_pessoa_fis_respon = b.CD_PESSOA_RESPONSAVEL
+and a.nr_seq_cad_dom = c.nr_sequencia
+and c.dt_liberacao is not null
+and b.dt_liberacao is not null
+and b.dt_liberacao BETWEEN inicio_dia(:dt_inicial) and fim_dia(:dt_final)
+and (b.CD_PROFISSIONAL = :CD_PROFISSIONAL or (:CD_PROFISSIONAL = '0'))
+and ((b.cd_estabelecimento = :cd_estab) OR (:cd_estab = '0'))
+and ((b.NR_SEQ_SUS_EQUIPE = :nr_equipe) or (:nr_equipe = '0'))
+
+and c.nr_sequencia = (
+select max (x.nr_sequencia)
+from ESUS_CAD_DOMICILIAR x
+where x.cd_cep = c.cd_cep
+and x.NR_LOGRADOURO = c.nr_logradouro
+and c.dt_liberacao is not null
+)
+order by casa, pessoa_resp</code></pre>
+                    </div>
+                </div>
+
+                <!-- Reports -->
+                <div class="bg-darker p-4 sm:p-6 rounded-lg border border-gray-800 hover:border-primary/30 transition-all duration-300">
+                    <button class="drawer-toggle w-full text-left flex items-center justify-between py-2" data-drawer="sql-relatorios">
+                        <h3 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                            <i data-feather="bar-chart-2" class="w-5 h-5 text-primary"></i>
+                            <span data-i18n="sql.reports.title">Relatórios</span>
+                        </h3>
+                        <i data-feather="chevron-down" class="drawer-icon w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div id="sql-relatorios-content" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-4">
+                        <pre class="bg-dark/50 p-3 sm:p-4 rounded text-xs sm:text-sm text-gray-300 overflow-x-auto border border-gray-700"><code>-- Relatório de procedimentos por especialidade
+-- Relatório de procedimentos por especialidade
+SELECT 
+    e.ds_especialidade,
+    COUNT(p.cd_procedimento) AS total_procedimentos,
+    SUM(p.vl_procedimento) AS valor_total,
+    AVG(p.vl_procedimento) AS valor_medio
+FROM 
+    procedimento p
+JOIN 
+    especialidade e ON p.cd_especialidade = e.cd_especialidade
+WHERE 
+    p.dt_procedimento BETWEEN '2023-01-01' AND '2023-12-31'
+GROUP BY 
+    e.ds_especialidade
+HAVING 
+    COUNT(p.cd_procedimento) > 10
+ORDER BY 
+    valor_total DESC;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Complex Queries -->
+                <div class="bg-darker p-4 sm:p-6 rounded-lg border border-gray-800 hover:border-primary/30 transition-all duration-300">
+                    <button class="drawer-toggle w-full text-left flex items-center justify-between py-2" data-drawer="sql-complexas">
+                        <h3 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                            <i data-feather="layers" class="w-5 h-5 text-primary"></i>
+                            <span data-i18n="sql.complex.title">Consultas Complexas</span>
+                        </h3>
+                        <i data-feather="chevron-down" class="drawer-icon w-5 h-5 text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div id="sql-complexas-content" class="hidden max-h-0 overflow-hidden transition-all duration-300 mt-4">
+                        <pre class="bg-dark/50 p-3 sm:p-4 rounded text-xs sm:text-sm text-gray-300 overflow-x-auto border border-gray-700"><code>-- Inserção de DIU
+SELECT PPD.DT_REGISTRO REGISTRO,
+OBTER_NOME_PF(PPD.CD_PESSOA_FISICA)PACIENTE,
+FLOOR((TO_CHAR(SYSDATE, 'YYYYMMDD') - TO_CHAR(OBTER_DATA_NASCTO_PF(PPD.CD_PESSOA_FISICA), 'YYYYMMDD')) / 10000) AS IDADE,
+HSM.QT_GESTACOES GESTAÇÕES,
+OBTER_NOME_ESTABELECIMENTO(OBTER_ESTAB_ATEND(PPD.NR_ATENDIMENTO))ESTABELECIMENTO,
+OBTER_NOME_PF(PPD.CD_PROFISSIONAL) PROFISSIONAL,
+HSM.DS_OBSERVACAO OBSERVACAO
+
+
+
+
+FROM PROC_PAC_DESCRICAO PPD,
+HISTORICO_SAUDE_MULHER HSM
+
+WHERE PPD.CD_PESSOA_FISICA = HSM.CD_PESSOA_FISICA
+AND PPD.NR_SEQ_PROC_INTERNO = '38612'
+AND ((obter_estab_atendimento(PPD.nr_atendimento) = :cd_estab) or (:cd_estab = '0'))
+AND PPD.DT_REGISTRO between inicio_dia(:dt_inicial) and fim_dia(:dt_final)
+AND ((PPD.CD_PROFISSIONAL = :CD_PROFISSIONAL) OR (:CD_PROFISSIONAL = '0'))
+AND :IE_SINTETICO='N'
+
+ORDER BY PPD.NR_ATENDIMENTO ASC</code></pre>
                     </div>
                 </div>
             </div>
