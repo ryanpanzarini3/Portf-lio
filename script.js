@@ -182,12 +182,14 @@ document.addEventListener('DOMContentLoaded', function() {
         let idx = 0;
         const speed = 80; // ms per character (adjustable)
 
-        // Clear initial
+        // Clear initial and reset
         typingEl.textContent = '';
+        cursorEl.style.animation = 'none'; // Reset cursor animation
 
         function typeNext() {
             if (idx < chars.length) {
-                typingEl.textContent += chars[idx++];
+                typingEl.textContent = fullText.substring(0, idx + 1);
+                idx++;
                 setTimeout(typeNext, speed + Math.random() * 40);
             } else {
                 // After finishing, keep cursor blinking; no loop
