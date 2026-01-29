@@ -93,6 +93,10 @@ const translations = {
       cafeteria: {
         title: 'Cafeteria Panzarini',
         desc: 'Desenvolvido com HTML, TailwindCSS e JavaScript. O site apresenta o cardápio completo de cafés e lanches com um design acolhedor e responsivo. Conta com integração direta ao WhatsApp pelo front-end, facilitando pedidos e encomendas com apenas um clique.'
+      },
+      taskmanager: {
+        title: 'SaúdePG',
+        desc: 'Progressive Web Application que conecta cidadãos às suas unidades de saúde em Ponta Grossa. Desenvolvido como projeto solo, o sistema identifica automaticamente a unidade de referência através de geolocalização, oferece mapa interativo com 50 unidades, sistema de triagem de sintomas e funciona offline. Frontend: HTML5, CSS3 (Tailwind), Vanilla JavaScript ES6+, Leaflet.js e Web Components.'
       }
     },
     common: {
@@ -257,6 +261,10 @@ const translations = {
       cafeteria: {
         title: 'Cafeteria Panzarini',
         desc: 'Desarrollado con HTML, TailwindCSS y JavaScript. El sitio presenta el menú completo de cafés y aperitivos con un diseño acogedor y responsivo. Integración directa con WhatsApp para pedidos.'
+      },
+      taskmanager: {
+        title: 'Task Manager',
+        desc: 'Aplicación web intuitiva para gestionar tareas y productividad. Desarrollada con React y Node.js, ofrece autenticación segura, sincronización en tiempo real e interfaz responsiva. Incluye funciones como categorización, priorización y notificaciones.'
       }
     },
     common: {
@@ -417,6 +425,10 @@ const translations = {
       cafeteria: {
         title: 'Cafeteria Panzarini',
         desc: 'Developed with HTML, TailwindCSS and JavaScript. The website presents the complete menu of coffees and snacks with a cozy and responsive design. It has direct integration with WhatsApp through the front-end, making it easier to place orders with just one click.'
+      },
+      taskmanager: {
+        title: 'Task Manager',
+        desc: 'Intuitive web application for managing tasks and productivity. Developed with React and Node.js, it offers secure authentication, real-time synchronization and responsive interface. Includes features such as categorization, prioritization and notifications.'
       }
     },
     common: {
@@ -581,6 +593,10 @@ const translations = {
       cafeteria: {
         title: 'Cafeteria Panzarini',
         desc: 'Sviluppato con HTML, TailwindCSS e JavaScript. Il sito presenta il menu completo di caffè e snack con un design accogliente e reattivo. Ha l\'integrazione diretta con WhatsApp tramite il front-end, facilitando gli ordini con un semplice clic.'
+      },
+      taskmanager: {
+        title: 'Task Manager',
+        desc: 'Applicazione web intuitiva per la gestione di attività e produttività. Sviluppata con React e Node.js, offre autenticazione sicura, sincronizzazione in tempo reale e interfaccia reattiva. Include funzioni come categorizzazione, prioritizzazione e notifiche.'
       }
     },
     common: {
