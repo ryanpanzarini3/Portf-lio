@@ -608,6 +608,8 @@
                                     </div>
                                 </div>
                             </div>
+
+
                             
                             <!-- Desktop layout with overlay (hidden on mobile) -->
                             <div class="hidden sm:block" style="height: 450px; position: relative;">
@@ -651,6 +653,7 @@
                         </div>
                     </div>
                 </div>
+                
                 
                 <!-- Project 3: Cafeteria Panzarini -->
                 <div class="reveal-item grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -758,6 +761,123 @@
                                         </div>
                                         <div class="w-full bg-white overflow-hidden" style="height: 240px;">
                                             <img src="imagens/CafeteriaMobile.jpeg" alt="Cafeteria Mobile" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="bg-black px-4 py-2 flex justify-center">
+                                            <div class="bg-gray-700 rounded-full" style="width: 80%; height: 4px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: SaúdePG -->
+                <div class="reveal-item grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div class="order-2 lg:order-1 flex flex-col justify-center">
+                        <!-- Project Info -->
+                        <div class="w-full">
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4" data-i18n="projects.taskmanager.title">SaúdePG</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-6 leading-relaxed" data-i18n="projects.taskmanager.desc"> Progressive Web Application que conecta cidadãos às suas unidades de saúde em Ponta Grossa. Desenvolvido como projeto solo, o sistema identifica automaticamente a unidade de referência através de geolocalização, oferece mapa interativo com 50 unidades, sistema de triagem de sintomas e funciona offline. Frontend: HTML5, CSS3 (Tailwind), Vanilla JavaScript ES6+, Leaflet.js e Web Components.</p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">JavaScript</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">HTML/CSS</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-semibold">Python</span>
+                            </div>
+                            
+                            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                                <a href="https://ryanpanzarini3.github.io/AppSaude/" class="inline-flex items-center justify-center sm:justify-start px-4 sm:px-6 py-2 sm:py-3 border border-primary text-primary font-mono text-sm sm:text-base rounded-md hover:bg-primary/10 transition-all duration-300">
+                                    <i data-feather="external-link" class="w-4 h-4 mr-2"></i> <span data-i18n="common.live">Live Demo</span>
+                                </a>
+                                <a href="https://github.com/ryanpanzarini3/Portfolio" class="inline-flex items-center justify-center sm:justify-start px-4 sm:px-6 py-2 sm:py-3 border border-gray-700 text-gray-400 font-mono text-sm sm:text-base rounded-md hover:border-primary/50 hover:text-white transition-all duration-300">
+                                    <i data-feather="github" class="w-4 h-4 mr-2"></i> <span data-i18n="common.source">GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-1 lg:order-2 flex justify-center w-full">
+                        <!-- Mockup Devices -->
+                        <div class="relative w-full max-w-2xl mx-auto devices-carousel">
+                            <!-- Mobile Carousel (Only shows on small screens) -->
+                            <div class="sm:hidden w-full">
+                                <div class="carousel-container">
+                                    <!-- Device Label - Mobile -->
+                                    <div class="carousel-item">
+                                        <div class="flex flex-col items-center w-full">
+                                            <div class="device-label">Mobile Version</div>
+                                            <!-- iPhone Mockup -->
+                                            <div class="flex justify-center">
+                                                <div class="bg-black rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-900" style="width: 140px; height: 280px;">
+                                                    <div class="relative bg-black">
+                                                        <div class="bg-black rounded-b-2xl mx-auto" style="width: 100px; height: 24px;"></div>
+                                                    </div>
+                                                    <div class="w-full bg-white overflow-hidden" style="height: 220px;">
+                                                        <div class="w-full h-full bg-gradient-to-b from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-center px-2">Task Manager Mobile</div>
+                                                    </div>
+                                                    <div class="bg-black px-4 py-1.5 flex justify-center">
+                                                        <div class="bg-gray-700 rounded-full" style="width: 80%; height: 4px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Device Label - Desktop -->
+                                    <div class="carousel-item">
+                                        <div class="flex flex-col items-center w-full">
+                                            <div class="device-label">Desktop Version</div>
+                                            <!-- Mac Mockup -->
+                                            <div class="relative w-full flex justify-center">
+                                                <div class="bg-gray-800 rounded-lg shadow-2xl overflow-hidden border-4 border-gray-900" style="max-width: 240px;">
+                                                    <div class="bg-gray-700 px-3 py-1 flex items-center justify-between h-6">
+                                                        <div class="flex items-center gap-1">
+                                                            <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                            <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+                                                            <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                                        </div>
+                                                        <span class="text-xs text-gray-400 font-semibold">Project</span>
+                                                        <div class="w-4"></div>
+                                                    </div>
+                                                    <div class="overflow-hidden" style="height: 120px;">
+                                                        <div class="w-full h-full bg-gradient-to-b from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-center text-xs">Task Manager Desktop</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Desktop layout with overlay (hidden on mobile) -->
+                            <div class="hidden sm:block" style="height: 450px; position: relative;">
+                                <!-- Desktop Mockup -->
+                                <div class="desktop-mockup-container">
+                                    <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border-8 border-gray-900" style="width: 380px;">
+                                        <div class="bg-gray-700 px-4 py-2 flex items-center justify-between h-7">
+                                            <div class="flex items-center gap-1">
+                                                <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                                                <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                                            </div>
+                                            <span class="text-xs text-gray-400 font-semibold">Project</span>
+                                            <div class="w-4"></div>
+                                        </div>
+                                        <div class="overflow-hidden" style="height: 200px;">
+                                            <img src="imagens/WhatsApp Image 2026-01-29 at 09.03.49.jpeg" alt="AppSaude Desktop" class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile Mockup Overlay -->
+                                <div class="mobile-mockup-overlay">
+                                    <div class="bg-black rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-900" style="width: 160px; height: 320px;">
+                                        <div class="relative bg-black">
+                                            <div class="bg-black rounded-b-2xl mx-auto" style="width: 110px; height: 26px;"></div>
+                                        </div>
+                                         <div class="w-full bg-white overflow-hidden" style="height: 240px;">
+                                            <img src="imagens/WhatsApp Image 2026-01-29 at 09.21.01.jpeg" alt="AppSaude Mobile" class="w-full h-full object-cover">
                                         </div>
                                         <div class="bg-black px-4 py-2 flex justify-center">
                                             <div class="bg-gray-700 rounded-full" style="width: 80%; height: 4px;"></div>
